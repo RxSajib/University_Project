@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+
+
+
+
+        <item
+            android:icon="@drawable/profileicon"
+            android:id="@+id/ProfileID"
+            android:title="Profile">
+
+        </item>
+        <item
+            android:icon="@drawable/dashboard"
+            android:id="@+id/dashboardID"
+            android:title="Dashboard">
+
+        </item>
+
+        <item android:title="My Menu">
+
+            <menu>
+
+                <group android:checkableBehavior="single">
+
+                    <item
+                        android:icon="@drawable/request"
+                        android:id="@+id/MyRequestID"
+                        android:title="Request">
+
+                    </item>
+
+                    <item
+                        android:icon="@drawable/list"
+                        android:id="@+id/BloodListID"
+                        android:title="My List">
+
+                    </item>
+
+
+                </group>
+
+            </menu>
+
+        </item>
+
+
+
+
+        <item
+            android:icon="@drawable/stoke"
+            android:id="@+id/StokeID"
+            android:title="Stock">
+
+        </item>
+
+
+
+        <item android:title="Communaction">
+
+
+
+            <menu>
+
+                <group android:checkableBehavior="single">
+
+
+
+                    <item
+                        android:icon="@drawable/globalchat"
+                        android:id="@+id/GlobalChatID"
+                        android:title="Global Chat">
+
+                    </item>
+
+                    <item
+                        android:icon="@drawable/feedback"
+                        android:id="@+id/FeedBackID"
+                        android:title="FeedBack">
+
+                    </item>
+
+                    <item
+                        android:icon="@drawable/share"
+                        android:id="@+id/ShareID"
+                        android:title="Share">
+
+                    </item>
+
+                </group>
+            </menu>
+
+
+
+        </item>
+
+
+
+
+
+
+
+
+        <item
+            android:icon="@drawable/planning"
+            android:id="@+id/NextPlayingID"
+            android:title="Next Planing">
+
+        </item>
+
+        <item
+            android:icon="@drawable/logout"
+            android:id="@+id/LogoutID"
+            android:title="LogOut">
+
+        </item>
+
+    </group>
+
+</menu>

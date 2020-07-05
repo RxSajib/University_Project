@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context=".HomePages">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/DrawerLayoutID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/HomeToolbarID"
+                    android:background="@color/toolbarcolors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/MenuButtonID"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/menu_icons"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp">
+                        </ImageView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/MenuButtonID"
+                            android:textStyle="bold"
+                            android:text="Stamford Blood Bank"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            app:fontFamily="sans-serif-smallcaps">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+
+                <RelativeLayout
+                    android:layout_below="@id/HomeToolbarID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <FrameLayout
+                        android:id="@+id/HomePageFreamID"
+                        android:layout_above="@+id/BottomNavID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </FrameLayout>
+
+
+                  <com.google.android.material.bottomnavigation.BottomNavigationView
+                      app:menu="@menu/home_menu"
+                      android:id="@+id/BottomNavID"
+                      android:layout_width="match_parent"
+                      android:layout_alignParentBottom="true"
+                      android:layout_height="wrap_content">
+
+                  </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.navigation.NavigationView
+                android:layout_width="wrap_content"
+                android:layout_gravity="start"
+                android:id="@+id/NavagationViewID"
+                app:headerLayout="@layout/header_layout_design"
+                app:menu="@menu/navagation_menu"
+                android:layout_height="match_parent">
+
+            </com.google.android.material.navigation.NavigationView>
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

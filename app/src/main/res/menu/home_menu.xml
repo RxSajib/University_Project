@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/HomeID"
+        android:title="Home"
+        android:icon="@drawable/homeblack"
+        ></item>
+    <item
+        android:id="@+id/SearchID"
+        android:title="Search"
+        android:icon="@drawable/searchblack"
+        ></item>
+    <item
+        android:id="@+id/InboxID"
+        android:title="Inbox"
+        android:icon="@drawable/inboxblack"
+        ></item>
+    <item
+        android:id="@+id/NewsID"
+        android:title="Feed"
+        android:icon="@drawable/newsblack"
+        ></item>
+
+    <item
+        android:id="@+id/NotifactionID"
+        android:title="Notifaction"
+        android:icon="@drawable/commentblack"
+        ></item>
+
+</menu>

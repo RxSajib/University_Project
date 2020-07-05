@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/HomeLayoutID"
+    tools:context=".PhoneLogin">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:layout_above="@+id/MiddlelayoutID">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/regimage">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/MiddlelayoutID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/LoginButtonID"
+            android:layout_centerHorizontal="true">
+
+
+            <RelativeLayout
+                android:id="@+id/TextLayoutID"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/NumberText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Verify Your Number"
+                    android:textColor="#5A3EA4"
+                    android:textSize="20sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/NumberText"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:layout_marginBottom="50dp"
+                    android:text="@string/phonetext"
+                    android:textSize="15sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/TextLayoutID"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="50dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/CodeNumberID"
+                    android:background="@drawable/phone_number_edittext"
+                    android:layout_width="70dp"
+                    android:padding="12dp"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:hint="+880"
+                    android:maxLength="4"
+                    android:singleLine="true"
+                    android:inputType="phone"
+                    android:layout_height="wrap_content">
+
+                </EditText>
+
+                <EditText
+                    android:id="@+id/PhoneNumberID"
+                    android:layout_toRightOf="@id/CodeNumberID"
+                    android:layout_marginLeft="10dp"
+                    android:padding="12dp"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textSize="20sp"
+                    android:maxLength="10"
+                    android:textColor="@android:color/black"
+                    android:hint="Phone Number"
+                    android:background="@drawable/phone_number_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </EditText>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/LoginButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="30dp"
+            android:elevation="0.2dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/logindesign"
+            android:src="@drawable/login">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:text="Continue"
+                android:fontFamily="sans-serif"
+                android:layout_height="wrap_content">
+            </com.google.android.material.textview.MaterialTextView>
+
+
+            <ProgressBar
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:indeterminate="true"
+                android:progressDrawable="@drawable/progressbar_background"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp">
+
+            </ProgressBar>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="ProfilePages.ProfileSecondPage">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ProfieSecondPageToolbarID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbarcolors"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="SetUp Your Profile (2 of 3)"
+                    android:textColor="@android:color/white">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <RelativeLayout
+            android:layout_below="@id/ProfieSecondPageToolbarID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content">
+
+
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:textSize="25sp"
+                    android:id="@+id/acadamicinfotextID"
+                    android:textColor="@android:color/black"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textStyle="bold"
+                    android:text="Enter your academic Info"
+                    android:layout_height="wrap_content">
+
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <RelativeLayout
+                    android:id="@+id/DepertmentButtonID"
+                    android:layout_below="@+id/acadamicinfotextID"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/profile_selected_button"
+                    android:layout_height="40dp">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/DepertMentFirstText"
+                        android:textSize="14sp"
+                        android:visibility="invisible"
+                        android:layout_marginLeft="20dp"
+                        android:text="Depertment :"
+                        android:textColor="@android:color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:text="Depertment"
+                        android:id="@+id/DepertmentMidname"
+                        android:textColor="@android:color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/DepertmentLast"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:visibility="invisible"
+                        android:textColor="@android:color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/BatchButtonID"
+                    android:layout_below="@+id/DepertmentButtonID"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/profile_selected_button"
+                    android:layout_height="40dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:text="batch"
+                        android:textColor="@android:color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/YearOfstudentButtonID"
+                    android:layout_below="@+id/BatchButtonID"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/profile_selected_button"
+                    android:layout_height="40dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/YesrstudentStartText"
+                        android:textSize="14sp"
+                        android:visibility="invisible"
+                        android:layout_marginLeft="20dp"
+                        android:text="Student year :"
+                        android:textColor="@android:color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/YearStudentMidText"
+                        android:text="Year of student"
+                        android:textColor="@android:color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/YearstudentLastText"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:visibility="invisible"
+                        android:textColor="@android:color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/CampusButtonID"
+                    android:layout_below="@+id/YearOfstudentButtonID"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/profile_selected_button"
+                    android:layout_height="40dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/CampusFirstname"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:text="Campus :"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:textSize="14sp"
+                            android:id="@+id/CampusLastname"
+                            android:layout_alignParentRight="true"
+                            android:visibility="invisible"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+
+                        android:id="@+id/CampusMidName"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:text="Campus"
+                        android:textColor="@android:color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/AccadamcInfoContinueButtonID"
+                    android:background="@drawable/profile_button_invisiabe"
+                    android:layout_below="@+id/CampusButtonID"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:text="Continue"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

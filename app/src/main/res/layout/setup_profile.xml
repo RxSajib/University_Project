@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/MainFraimID"
+    tools:context="ProfilePages.SetupProfile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ProfileToolabTDID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbarcolors"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="SetUp Your Profile (1 of 3)"
+                    android:textColor="@android:color/white">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/ProfileToolabTDID"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:weightSum="4"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="#8D8D8D"
+                            android:layout_marginRight="25dp"
+                            android:gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:textSize="16sp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="@string/profile_des"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RelativeLayout
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:id="@+id/sss"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profileimageID"
+                                    android:layout_width="150dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:elevation="1dp"
+                                    android:src="@drawable/person_design"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_height="150dp">
+
+                                </de.hdodenhof.circleimageview.CircleImageView>
+
+                                <ImageView
+                                    android:src="@drawable/camera_icon"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_width="30dp"
+                                    android:elevation="6dp"
+                                    android:layout_height="30dp">
+
+                                </ImageView>
+
+                            </RelativeLayout>
+
+
+                            <EditText
+                                android:id="@+id/ProfilenameID"
+                                android:layout_below="@+id/sss"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="40dp"
+                                android:padding="12dp"
+                                android:maxLength="10"
+                                android:background="@drawable/profile_edittext"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginTop="25dp"
+                                android:singleLine="true"
+                                android:inputType="text"
+                                android:hint="Enter name"
+                                android:layout_height="wrap_content">
+                            </EditText>
+
+
+                            <RelativeLayout
+                                android:id="@+id/ContinueButtonID"
+                                android:background="@drawable/profile_button_invisiabe"
+                                android:layout_below="@+id/ProfilenameID"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginRight="40dp"
+                                android:elevation="2dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="15sp"
+                                    android:text="Continue"
+                                    android:fontFamily="sans-serif-smallcaps"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

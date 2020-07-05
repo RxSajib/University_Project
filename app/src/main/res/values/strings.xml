@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">STAMFORD BLOOD BANK</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="phonetext">Please enter yout country code\nand phone number for verifaction</string>
+    <string name="profile_des">Please select all informaction of your profile
+        to find donor or request user easily please setup
+        your reail informaction of your profile \nThanks</string>
+</resources>

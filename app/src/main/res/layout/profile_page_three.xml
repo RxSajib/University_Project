@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context="ProfilePages.ProfilePageThree">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ProfieThreePageToolbarID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbarcolors"
+           >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="SetUp Your Profile (3 of 3)"
+                    android:textColor="@android:color/white">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_below="@+id/ProfieThreePageToolbarID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ScrollView
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="25sp"
+                        android:id="@+id/acadamicinfotextID"
+                        android:textColor="@android:color/black"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:layout_marginTop="30dp"
+                        android:textStyle="bold"
+                        android:text="Enter your physiques"
+                        android:layout_height="wrap_content">
+
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                    <RelativeLayout
+                        android:id="@+id/FatButtonID"
+                        android:layout_below="@+id/acadamicinfotextID"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/profile_selected_button"
+                        android:layout_height="40dp">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/BloodFirstText"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:layout_marginLeft="20dp"
+                            android:text="Blood :"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:textSize="14sp"
+                            android:id="@+id/BloodMidTex"
+                            android:text="Blood"
+                            android:textColor="@android:color/black"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/BloodLastText"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:layout_marginLeft="20dp"
+                            android:text="Age :"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/AgeButtonID"
+                        android:layout_below="@+id/FatButtonID"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/profile_selected_button"
+                        android:layout_height="40dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/AgeFirstText"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:layout_marginLeft="20dp"
+                            android:text="Age :"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:textSize="14sp"
+                            android:text="Age"
+                            android:id="@+id/AgeMid"
+                            android:textColor="@android:color/black"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/AgeLastText"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="20dp"
+                            android:text="Health :"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/HeightButtonID"
+                        android:layout_below="@+id/AgeButtonID"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/profile_selected_button"
+                        android:layout_height="40dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/HeightFirst"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:layout_marginLeft="20dp"
+                            android:text="Heigth :"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:textSize="14sp"
+                            android:text="Height"
+                            android:id="@+id/HeightMid"
+                            android:textColor="@android:color/black"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/HeightLast"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/WeightButttonID"
+                        android:layout_below="@+id/HeightButtonID"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/profile_selected_button"
+                        android:layout_height="40dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/WeightFirst"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:layout_marginLeft="20dp"
+                            android:text="Weigth :"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:textSize="14sp"
+                            android:text="Weight"
+                            android:id="@+id/WeightMid"
+                            android:textColor="@android:color/black"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/WeigthLast"
+                            android:textSize="14sp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:visibility="invisible"
+                            android:layout_marginLeft="20dp"
+                            android:text="Age :"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/LevelButtonID"
+                        android:layout_below="@+id/WeightButttonID"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/profile_selected_button"
+                        android:layout_height="40dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/HealthFirst"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:layout_marginLeft="20dp"
+                            android:text="Health :"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:textSize="14sp"
+                            android:text="Health"
+                            android:id="@+id/HealthMid"
+                            android:textColor="@android:color/black"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/HealthLast"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:text="Campus :"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/GenderLayoutID"
+                        android:layout_below="@+id/LevelButtonID"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/MaleButtonIDBox"
+                                android:background="@drawable/gender_box"
+                                android:layout_width="90dp"
+                                android:layout_marginLeft="60dp"
+                                android:layout_height="90dp">
+
+
+                                <ImageView
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_width="50dp"
+                                    android:src="@drawable/man"
+                                    android:layout_height="50dp">
+
+                                </ImageView>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/FemaleButtonBox"
+                                android:background="@drawable/gender_box"
+                                android:layout_width="90dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="60dp"
+                                android:layout_height="90dp">
+
+                                <ImageView
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_width="50dp"
+                                    android:src="@drawable/woman"
+                                    android:layout_height="50dp">
+
+                                </ImageView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/SetupButtonID"
+                        android:background="@drawable/profile_button_invisiabe"
+                        android:layout_below="@+id/GenderLayoutID"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            android:text="Continue"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

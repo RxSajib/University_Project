@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "947982321767",
+    "firebase_url": "https://stamford-blood-bank.firebaseio.com",
+    "project_id": "stamford-blood-bank",
+    "storage_bucket": "stamford-blood-bank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947982321767:android:6c4776a3599e4756ec2cc2",
+        "android_client_info": {
+          "package_name": "com.stamford.stamfordbloodbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947982321767-uaqar7ld28q1791po8pm4l0svfnso3c0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stamford.stamfordbloodbank",
+            "certificate_hash": "5590253095710eb3f40e7cf56d0c2ada4d848b6e"
+          }
+        },
+        {
+          "client_id": "947982321767-mo18t84od70feku7efop1eronbvphm2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqiiNIgjQZu5kNorQzUKgerHSP--FltJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947982321767-mo18t84od70feku7efop1eronbvphm2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

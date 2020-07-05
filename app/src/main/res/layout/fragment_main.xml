@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:id="@+id/GetStartRootID"
+    tools:context=".MainFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/PageOneID"
+            android:text="page one"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+
+        <RelativeLayout
+            android:layout_above="@+id/ButtonLayoutID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/getstartimageID"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/welcome"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content">
+                </ImageView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_below="@+id/getstartimageID"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp"
+                    app:fontFamily="sans-serif-smallcaps"
+                    android:id="@+id/welcometext"
+                    android:textColor="@android:color/black"
+                    android:text="Welcome Again"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_below="@+id/welcometext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:layout_marginTop="10dp"
+                    android:text="Please continue with phone login to access all fetures also find quickly your blood continue with guest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/ButtonLayoutID"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/ContinuePhoneButtonID"
+                android:elevation="0.4dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/getstart_button_design"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+
+                <RelativeLayout
+                    android:background="@drawable/dasboard_phone_button_ripple"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:textSize="16sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="Continue with Phone"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                    <ImageView
+                        android:src="@drawable/call"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/ContinueGuestButtonID"
+                android:layout_below="@+id/ContinuePhoneButtonID"
+                android:elevation="0.4dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/guest_background"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:textSize="16sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Continue with Guest"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+                <ImageView
+                    android:src="@drawable/guest_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
