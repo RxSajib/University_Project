@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="7dp">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -13,9 +13,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/SuserprofileID"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/person_design">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/SuserprofileID">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UserName"
+                        android:id="@+id/SusernameID"
+                        android:layout_marginBottom="3dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UserName"
+                        android:layout_marginTop="3dp"
+                        android:layout_below="@+id/SusernameID"
+                        android:textSize="10sp">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
 
         </RelativeLayout>
+
 
     </com.google.android.material.card.MaterialCardView>
 

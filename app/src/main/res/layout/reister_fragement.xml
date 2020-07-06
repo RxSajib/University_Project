@@ -122,10 +122,11 @@
                                    android:background="@null"
                                    android:inputType="number"
                                    android:hint="C"
+                                   android:gravity="center"
                                    android:layout_centerHorizontal="true"
                                    android:layout_centerVertical="true"
                                    android:maxLength="1"
-                                   android:layout_width="wrap_content"
+                                   android:layout_width="match_parent"
                                    android:layout_height="wrap_content">
 
                                </EditText>
@@ -145,10 +146,11 @@
                                    android:background="@null"
                                    android:inputType="number"
                                    android:hint="O"
+                                   android:gravity="center"
                                    android:layout_centerHorizontal="true"
                                    android:layout_centerVertical="true"
                                    android:maxLength="1"
-                                   android:layout_width="wrap_content"
+                                   android:layout_width="match_parent"
                                    android:layout_height="wrap_content">
 
                                </EditText>
@@ -170,10 +172,11 @@
                                    android:background="@null"
                                    android:inputType="number"
                                    android:hint="D"
+                                   android:gravity="center"
                                    android:layout_centerHorizontal="true"
                                    android:layout_centerVertical="true"
                                    android:maxLength="1"
-                                   android:layout_width="wrap_content"
+                                   android:layout_width="match_parent"
                                    android:layout_height="wrap_content">
 
                                </EditText>
@@ -194,11 +197,12 @@
                                    android:textSize="20sp"
                                    android:background="@null"
                                    android:hint="E"
+                                   android:gravity="center"
                                    android:layout_centerHorizontal="true"
                                    android:layout_centerVertical="true"
                                    android:inputType="number"
                                    android:maxLength="1"
-                                   android:layout_width="wrap_content"
+                                   android:layout_width="match_parent"
                                    android:layout_height="wrap_content">
 
                                </EditText>
@@ -219,12 +223,13 @@
                                    android:textColor="@android:color/black"
                                    android:textSize="20sp"
                                    android:hint="X"
+                                   android:gravity="center"
                                    android:background="@null"
                                    android:layout_centerHorizontal="true"
                                    android:inputType="number"
                                    android:layout_centerVertical="true"
                                    android:maxLength="1"
-                                   android:layout_width="wrap_content"
+                                   android:layout_width="match_parent"
                                    android:layout_height="wrap_content">
 
                                </EditText>
@@ -250,7 +255,8 @@
                                    android:maxLength="1"
                                    android:inputType="number"
                                    android:hint="X"
-                                   android:layout_width="wrap_content"
+                                   android:gravity="center"
+                                   android:layout_width="match_parent"
                                    android:layout_height="wrap_content">
 
                                </EditText>

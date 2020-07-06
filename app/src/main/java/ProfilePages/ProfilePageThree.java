@@ -234,11 +234,10 @@ public class ProfilePageThree extends Fragment {
                                 agelast.setVisibility(View.VISIBLE);
                                 agelast.setText(Ageget);
                             } else {
-                                String Ageget = dataSnapshot.child("Age").getValue().toString();
                                 agefirst.setVisibility(View.VISIBLE);
                                 agemid.setVisibility(View.INVISIBLE);
                                 agelast.setVisibility(View.VISIBLE);
-                                agelast.setText(Ageget);
+                                
                             }
 
                             if (dataSnapshot.hasChild("Bloodgroup")) {

@@ -364,18 +364,18 @@
 
                             <RelativeLayout
                                 android:id="@+id/MaleButtonIDBox"
-                                android:background="@drawable/gender_box"
                                 android:layout_width="90dp"
+                                android:layout_height="90dp"
                                 android:layout_marginLeft="60dp"
-                                android:layout_height="90dp">
+                                android:background="@drawable/gender_box">
 
 
                                 <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
                                     android:layout_centerHorizontal="true"
                                     android:layout_centerVertical="true"
-                                    android:layout_width="50dp"
-                                    android:src="@drawable/man"
-                                    android:layout_height="50dp">
+                                    android:src="@drawable/man">
 
                                 </ImageView>
 
@@ -383,27 +383,24 @@
 
                             <RelativeLayout
                                 android:id="@+id/FemaleButtonBox"
-                                android:background="@drawable/gender_box"
                                 android:layout_width="90dp"
+                                android:layout_height="90dp"
                                 android:layout_alignParentRight="true"
                                 android:layout_marginRight="60dp"
-                                android:layout_height="90dp">
+                                android:background="@drawable/gender_box">
 
                                 <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
                                     android:layout_centerHorizontal="true"
                                     android:layout_centerVertical="true"
-                                    android:layout_width="50dp"
-                                    android:src="@drawable/woman"
-                                    android:layout_height="50dp">
+                                    android:src="@drawable/woman">
 
                                 </ImageView>
 
                             </RelativeLayout>
 
                         </RelativeLayout>
-
-
-
 
 
                     </RelativeLayout>

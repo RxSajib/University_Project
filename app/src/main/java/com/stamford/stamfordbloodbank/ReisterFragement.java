@@ -112,15 +112,16 @@ public class ReisterFragement extends AppCompatActivity {
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         Mauth.signInWithCredential(credential)
-                .addOnCompleteListener((Activity) getApplicationContext(), new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener((Activity) ReisterFragement.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-//                            gotohome_pages(new HomePages());
+//
                             Intent intent = new Intent(getApplicationContext(), HomeContainer.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);
-
+                            finish();
 
                         } else {
 

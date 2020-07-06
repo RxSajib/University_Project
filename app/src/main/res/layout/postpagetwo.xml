@@ -7,18 +7,280 @@
     android:layout_height="match_parent">
 
 
-
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:textSize="25sp"
-        android:id="@+id/acadamicinfotextID"
-        android:textColor="@android:color/black"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textStyle="bold"
-        android:text="Enter your basic Info"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/PostTwoToolbarID"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    </com.google.android.material.textview.MaterialTextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="SetUp Your Info"
+                android:textColor="@android:color/white">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@+id/PostTwoToolbarID"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:textSize="25sp"
+                android:id="@+id/acadamicinfotextID"
+                android:textColor="@android:color/black"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:text="Enter your basic Info"
+                android:layout_height="wrap_content">
+            </com.google.android.material.textview.MaterialTextView>
+
+
+            <RelativeLayout
+                android:id="@+id/PasentBloodButtonID"
+                android:layout_below="@+id/acadamicinfotextID"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/profile_selected_button"
+                android:layout_height="40dp">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/BloodFirstText"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    android:layout_marginLeft="20dp"
+                    android:text="Depertment :"
+                    android:textColor="@android:color/black"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Blood"
+                    android:id="@+id/BloodMidText"
+                    android:textColor="@android:color/black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:id="@+id/BloodLastText"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:visibility="invisible"
+                    android:textColor="@android:color/black"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/PasentBloodUnit"
+                android:layout_below="@+id/PasentBloodButtonID"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/profile_selected_button"
+                android:layout_height="40dp">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/UnitFirstText"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    android:layout_marginLeft="20dp"
+                    android:text="Depertment :"
+                    android:textColor="@android:color/black"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Unit"
+                    android:id="@+id/UnitMidText"
+                    android:textColor="@android:color/black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:id="@+id/UnitLastText"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:visibility="invisible"
+                    android:textColor="@android:color/black"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/UserGenderID"
+                android:layout_below="@+id/PasentBloodUnit"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/MaleButtonIDBox"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="60dp"
+                        android:background="@drawable/gender_box">
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/man">
+
+                        </ImageView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/FemaleButtonBox"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="60dp"
+                        android:background="@drawable/gender_box">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/woman">
+
+                        </ImageView>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/UserMessageID"
+                android:layout_below="@+id/UserGenderID"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/profile_selected_button"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:hint="Enter your message"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:padding="7dp"
+                android:gravity="start|left"
+                android:layout_height="80dp">
+            </EditText>
+
+
+            <RelativeLayout
+                android:id="@+id/SubmitPostID"
+                android:background="@drawable/profile_button_invisiabe"
+                android:layout_below="@+id/UserMessageID"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:text="Continue"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
 
 
 </RelativeLayout>

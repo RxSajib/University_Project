@@ -124,6 +124,16 @@ public class HomePages extends Fragment {
                     //     goto_dashbord(new Dashboard());
                 }
 
+                if(item.getItemId() == R.id.LogoutID){
+                    drawerLayout.closeDrawer(Gravity.LEFT);
+                    drawerLayout.setClickable(true);
+                    drawerLayout.setClickable(true);
+                    Mauth.signOut();
+                    Intent intent = new Intent(getActivity(), PhoneLogin.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                }
+
                 return true;
             }
         });
@@ -180,12 +190,14 @@ public class HomePages extends Fragment {
     }*/
 
 
-    /*@Override
+    @Override
     public void onStart() {
 
         FirebaseUser Muser = Mauth.getCurrentUser();
         if (Muser == null) {
-            /// goto login page
+            Intent intent = new Intent(getActivity(), PhoneLogin.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
         } else {
             Muser_database.addValueEventListener(new ValueEventListener() {
                 @Override
@@ -205,7 +217,7 @@ public class HomePages extends Fragment {
         }
 
         super.onStart();
-    }*/
+    }
 
    /* private void goto_profile_pages(Fragment fragment){
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();

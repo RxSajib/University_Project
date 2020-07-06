@@ -1,5 +1,6 @@
 package com.stamford.stamfordbloodbank;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.text.MeasuredText;
@@ -13,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,10 +23,14 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textview.MaterialTextView;
 import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -39,6 +46,7 @@ public class PhoneLogin extends AppCompatActivity {
     private HomePages homePages;
     private MaterialTextView numbertext;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks Mcallback;
+    private PhoneAuthProvider.ForceResendingToken mResentToken;
 
 
     @Override
@@ -100,21 +108,23 @@ public class PhoneLogin extends AppCompatActivity {
         Mcallback = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
             public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-
+             //   signInWithPhoneAuthCredential(phoneAuthCredential);
             }
 
             @Override
             public void onVerificationFailed(FirebaseException e) {
-
+                Toast.makeText(getApplicationContext(), e.getMessage().toString(), Toast.LENGTH_LONG).show();
+                Log.d("ERROR", e.getMessage().toString());
             }
 
             @Override
-            public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+            public void onCodeSent( String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                 super.onCodeSent(s, forceResendingToken);
 
-                String data = s;
 
+                String data = s;
                 gotootp_pages(data);
+
             }
         };
 
@@ -123,16 +133,19 @@ public class PhoneLogin extends AppCompatActivity {
 
 
 
-   /* @Override
+    @Override
     public void onStart() {
 
         FirebaseUser Muser = Mauth.getCurrentUser();
-        if(Muser == null){
-            goto_home_pages(new HomePages());
+        if(Muser != null){
+            Intent intent = new Intent(getApplicationContext(), HomeContainer.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
         }
 
         super.onStart();
-    }*/
+    }
 
 
 
@@ -158,4 +171,41 @@ public class PhoneLogin extends AppCompatActivity {
        intent.putExtra("KEY", key);
        startActivity(intent);
    }
+
+
+    /*private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
+        Mauth.signInWithCredential(credential)
+                .addOnCompleteListener((Activity) getApplicationContext(), new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+
+//                            gotohome_pages(new HomePages());
+                            Intent intent = new Intent(getApplicationContext(), HomeContainer.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                            finish();
+
+                        } else {
+
+
+                            if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
+                                MaterialAlertDialogBuilder Mbuilder = new MaterialAlertDialogBuilder(PhoneLogin.this);
+                                Mbuilder.setTitle("Server Error ...");
+                                Mbuilder.setMessage(task.getException().getMessage());
+
+                                Mbuilder.setPositiveButton("TRY AGAIN", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                                    }
+                                });
+
+                                AlertDialog alertDialog = Mbuilder.create();
+                                alertDialog.show();
+                            }
+                        }
+                    }
+                });
+    }*/
 }
