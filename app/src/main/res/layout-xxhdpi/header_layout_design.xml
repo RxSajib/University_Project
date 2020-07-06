@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:layout_margin="20dp"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/rootlayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/NavProfileImageID"
+            android:layout_width="70dp"
+            android:background="@drawable/person_design"
+            android:layout_height="70dp">
+
+
+
+        </com.makeramen.roundedimageview.RoundedImageView>
+
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:src="@drawable/camera_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_toRightOf="@id/rootlayout"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/navprofilenameID"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-smallcaps"
+            android:layout_marginBottom="5dp"
+            android:text="Mr Sajib Roy"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textview.MaterialTextView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/navbloodID"
+            android:layout_below="@+id/navprofilenameID"
+            android:textSize="14sp"
+            app:fontFamily="sans-serif"
+            android:text="Blood Group: AB+"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textview.MaterialTextView>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

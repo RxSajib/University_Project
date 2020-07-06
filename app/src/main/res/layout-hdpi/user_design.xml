@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="7dp"
+        android:padding="5dp"
+        android:background="@drawable/bloodbox_design"
+        android:elevation="5dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="AB+"
+            android:textColor="@android:color/white"
+            android:textSize="18sp">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+
+
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/RightBox">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/UserNameID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="Donors Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/UserNameID"
+                    android:layout_marginTop="3dp"
+                    android:text="+8801771330378"
+                    android:textSize="13sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RightBox"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/person_design">
+
+
+                <ImageView
+                    android:id="@+id/SProfileImageID"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/call_black">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

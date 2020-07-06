@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="BootmNavPages.BottomHomePage">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/dashboard_top_background"
+            android:layout_height="100dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/NewDonorRequestCounterText"
+                                android:textSize="15sp"
+                                android:textColor="@android:color/white"
+                                android:text="200"
+                                android:layout_centerHorizontal="true"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/TextID"
+                                android:layout_below="@+id/NewDonorRequestCounterText"
+                                android:textSize="13sp"
+                                android:layout_marginTop="4dp"
+                                android:textColor="@android:color/white"
+                                android:text="New donor Request"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_below="@+id/TextID"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/top_button_design"
+                                android:textColor="#FB797C"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:text="See All"
+                                android:textSize="10sp"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/NewchatRequestID"
+                                android:textSize="15sp"
+                                android:textColor="@android:color/white"
+                                android:text="50"
+                                android:layout_centerHorizontal="true"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/STextID"
+                                android:layout_below="@+id/NewchatRequestID"
+                                android:textSize="13sp"
+                                android:layout_marginTop="4dp"
+                                android:textColor="@android:color/white"
+                                android:text="New Chat Request"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_below="@+id/STextID"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/top_button_design"
+                                android:textColor="#FB797C"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:text="See All"
+                                android:textSize="10sp"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="#fff"
+                android:layout_width="1dp"
+                android:layout_height="match_parent">
+
+            </View>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <HorizontalScrollView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:scrollbars="none"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/SearchButtonID"
+                        android:layout_width="70dp"
+                        android:elevation="3dp"
+                        android:background="@drawable/more_design"
+                        android:layout_height="90dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/BloodiconID"
+                                android:src="@drawable/bloodsearch_red"
+                                android:layout_width="30dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="30dp">
+                            </ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_below="@+id/BloodiconID"
+                                android:layout_width="wrap_content"
+                                android:textSize="15sp"
+                                android:id="@+id/SearhTextID"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#FB797C"
+                                android:text="Search"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/StokeButtonID"
+                        android:layout_width="70dp"
+                        android:layout_marginLeft="10dp"
+                        android:elevation="3dp"
+                        android:background="@drawable/more_design"
+                        android:layout_height="90dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/BloodStoke"
+                                android:src="@drawable/injectionred"
+                                android:layout_width="30dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="30dp">
+                            </ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_below="@+id/BloodStoke"
+                                android:id="@+id/StokeTextID"
+                                android:layout_width="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#FB797C"
+                                android:text="Stoke"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/RequestButtonID"
+                        android:layout_width="70dp"
+                        android:layout_marginLeft="10dp"
+                        android:elevation="3dp"
+                        android:background="@drawable/more_design"
+                        android:layout_height="90dp">
+
+                        <RelativeLayout
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/BloodRequest"
+                                    android:src="@drawable/postredicon"
+                                    android:layout_width="30dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_height="30dp">
+                                </ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_below="@+id/BloodRequest"
+                                    android:id="@+id/DashBoardTextID"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="15sp"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#FB797C"
+                                    android:text="Request"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_height="wrap_content">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/SettingsButtonID"
+                        android:layout_width="70dp"
+                        android:layout_marginLeft="10dp"
+                        android:elevation="3dp"
+                        android:background="@drawable/more_design"
+                        android:layout_height="90dp">
+
+                        <RelativeLayout
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/Settingicon"
+                                    android:src="@drawable/settings"
+                                    android:layout_width="30dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_height="30dp">
+                                </ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_below="@+id/Settingicon"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="15sp"
+                                    android:id="@+id/SettingsTextID"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#FB797C"
+                                    android:text="Settings"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_height="wrap_content">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+
+
+            </HorizontalScrollView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

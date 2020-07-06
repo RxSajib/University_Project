@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,7 +22,7 @@
         <RelativeLayout
             android:id="@+id/SearchContinrID"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="170dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="20dp"
@@ -33,11 +34,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="Find Donors"
                 android:textColor="@android:color/black"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold"></com.google.android.material.textview.MaterialTextView>
 
             <RelativeLayout
@@ -59,7 +60,7 @@
                     <RelativeLayout
                         android:id="@+id/DepertmentSearchID"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="35dp"
                         android:layout_marginBottom="5dp"
                         android:background="@drawable/search_ackground">
 
@@ -69,14 +70,14 @@
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="10dp"
                             android:text="Depertment"
-                            android:textSize="14sp">
+                            android:textSize="13sp">
 
                         </com.google.android.material.textview.MaterialTextView>
 
 
                         <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginRight="10dp"
@@ -89,7 +90,7 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="35dp"
                         android:layout_below="@+id/DepertmentSearchID"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/search_ackground">
@@ -100,13 +101,13 @@
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="10dp"
                             android:text="Blood Group"
-                            android:textSize="14sp">
+                            android:textSize="13sp">
 
                         </com.google.android.material.textview.MaterialTextView>
 
                         <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginRight="10dp"
@@ -129,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="5dp"
                 android:text="Search">
 
             </com.google.android.material.button.MaterialButton>
@@ -139,8 +140,10 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_below="@+id/SearchContinrID"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="10dp">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/AvabaleBloodTextID"
@@ -160,8 +163,6 @@
                 android:layout_below="@+id/AvabaleBloodTextID">
 
                 <LinearLayout
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +13,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="200dp"
             android:background="@color/colorPrimary">
 
 
@@ -23,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="70dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/search_top_background"
             android:elevation="10dp">
@@ -53,13 +54,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
                     android:layout_centerVertical="true">
 
 
                     <RelativeLayout
                         android:id="@+id/DepertmentSearchID"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="50dp"
                         android:layout_marginBottom="5dp"
                         android:background="@drawable/search_ackground">
 
@@ -69,14 +71,14 @@
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="10dp"
                             android:text="Depertment"
-                            android:textSize="14sp">
+                            android:textSize="17sp">
 
                         </com.google.android.material.textview.MaterialTextView>
 
 
                         <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginRight="10dp"
@@ -89,7 +91,7 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="50dp"
                         android:layout_below="@+id/DepertmentSearchID"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/search_ackground">
@@ -100,13 +102,13 @@
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="10dp"
                             android:text="Blood Group"
-                            android:textSize="14sp">
+                            android:textSize="17sp">
 
                         </com.google.android.material.textview.MaterialTextView>
 
                         <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginRight="10dp"
@@ -146,9 +148,9 @@
                 android:id="@+id/AvabaleBloodTextID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="10dp"
                 android:text="Available Blood"
-                android:textSize="13sp">
+                android:textSize="15sp">
 
             </com.google.android.material.textview.MaterialTextView>
 
@@ -160,8 +162,8 @@
                 android:layout_below="@+id/AvabaleBloodTextID">
 
                 <LinearLayout
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
