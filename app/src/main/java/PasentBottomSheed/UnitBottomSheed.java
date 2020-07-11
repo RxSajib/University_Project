@@ -14,6 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.stamford.stamfordbloodbank.R;
 
 public class UnitBottomSheed extends BottomSheetDialogFragment {
@@ -22,6 +25,9 @@ public class UnitBottomSheed extends BottomSheetDialogFragment {
     private String unitarray[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
     private RelativeLayout cancelbutton;
     private UnitbootmSheedLisiner mlisener;
+    private DatabaseReference MpostSave;
+    private FirebaseAuth Mauth;
+    private String CurrentUserID;
 
     @Nullable
     @Override
@@ -29,6 +35,9 @@ public class UnitBottomSheed extends BottomSheetDialogFragment {
         View view = inflater.inflate(R.layout.depertment_bottom_sheed, null, false);
 
 
+        Mauth = FirebaseAuth.getInstance();
+        CurrentUserID = Mauth.getCurrentUser().getUid();
+        MpostSave = FirebaseDatabase.getInstance().getReference().child("SavePost");
         listView = view.findViewById(R.id.DepertmentListviewID);
         cancelbutton = view.findViewById(R.id.CancelButtonID);
         cancelbutton.setOnClickListener(new View.OnClickListener() {
@@ -45,9 +54,7 @@ public class UnitBottomSheed extends BottomSheetDialogFragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String unit = adapterView.getItemAtPosition(i).toString();
-
-                mlisener.onbuttomclick("sajib");
-
+                MpostSave.child(CurrentUserID).child("unit_of_blood").setValue(unit);
                 dismiss();
             }
         });

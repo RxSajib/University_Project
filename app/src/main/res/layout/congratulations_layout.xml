@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:background="@drawable/congratulations_background"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            app:lottie_loop="false"
+            app:lottie_fileName="welcome.json"
+            app:lottie_autoPlay="true"
+            android:layout_height="match_parent">
+
+        </com.airbnb.lottie.LottieAnimationView>
+
+
+
+
+    <RelativeLayout
+        android:layout_above="@+id/BottomlayoutID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/DoneImage"
+                android:layout_width="50dp"
+                android:src="@drawable/done_icons"
+                android:layout_centerHorizontal="true"
+                android:layout_height="50dp"
+                >
+
+            </ImageView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/DoneImage"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:text="You have successfully completed\nthe blood request"
+                android:layout_height="wrap_content">
+
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/BottomlayoutID"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@drawable/inprogress_button_design"
+            android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_width="120dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_height="40dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="OKY"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@drawable/share_design"
+            android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_width="120dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_height="40dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Share"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

@@ -57,6 +57,10 @@ dependencies {
 
     implementation 'nl.joery.animatedbottombar:library:1.0.8'
 
+    implementation "com.airbnb.android:lottie:3.4.1"
+
+    implementation 'com.firebaseui:firebase-ui-database:1.1.1'
+
 }
 
 apply plugin: 'com.google.gms.google-services'

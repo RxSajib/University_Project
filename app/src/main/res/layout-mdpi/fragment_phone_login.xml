@@ -17,7 +17,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="30dp"
+            android:layout_margin="10dp"
             android:layout_above="@+id/MiddlelayoutID">
 
             <ImageView
@@ -65,10 +65,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/NumberText"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
-                    android:layout_marginBottom="50dp"
+                    android:layout_marginBottom="30dp"
                     android:text="@string/phonetext"
                     android:textSize="14sp">
 
@@ -84,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="30dp"
                 android:layout_height="wrap_content">
 
                 <EditText
@@ -92,7 +92,7 @@
                     android:background="@drawable/phone_number_edittext"
                     android:layout_width="70dp"
                     android:padding="12dp"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:textColor="@android:color/black"
                     android:hint="+880"
                     android:maxLength="4"
@@ -109,7 +109,7 @@
                     android:padding="12dp"
                     android:inputType="phone"
                     android:singleLine="true"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:maxLength="10"
                     android:textColor="@android:color/black"
                     android:hint="Phone Number"
@@ -128,7 +128,7 @@
         <RelativeLayout
             android:id="@+id/LoginButtonID"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="40dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginRight="30dp"
@@ -143,7 +143,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textColor="@android:color/white"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:text="Continue"
                 android:fontFamily="sans-serif"
                 android:layout_height="wrap_content">
@@ -151,8 +151,8 @@
 
 
             <ProgressBar
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_centerVertical="true"
                 android:indeterminate="true"
                 android:progressDrawable="@drawable/progressbar_background"

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".PostPageOne"
-    android:background="@android:color/white">
-
+    android:background="@android:color/white"
+    tools:context=".PostPageOne">
 
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/PostOneToolbarID"
-        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        style="?attr/actionBarSize"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -37,146 +36,148 @@
     </androidx.appcompat.widget.Toolbar>
 
 
-    <RelativeLayout
+    <ScrollView
         android:layout_below="@+id/PostOneToolbarID"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
 
-        <LinearLayout
-            android:weightSum="3"
-            android:orientation="vertical"
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
+
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/DesTextID"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="25dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="@string/donor_info"
+                android:textColor="#8D8D8D"
+                android:textSize="18sp">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/acadamicinfotextID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/DesTextID"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Enter your basic Info"
+                android:layout_marginTop="15dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"></com.google.android.material.textview.MaterialTextView>
+
+
+            <EditText
+                android:id="@+id/PasentNameID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/acadamicinfotextID"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/profile_selected_button"
+                android:hint="Enter pasent name*"
+                android:inputType="text"
+                android:maxLength="15"
+                android:padding="14dp"
+                android:singleLine="true"
+                android:textSize="18sp"></EditText>
+
+
+            <EditText
+                android:id="@+id/PasentHospitalNameID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/PasentNameID"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/profile_selected_button"
+                android:hint="Enter Hospital name*"
+                android:inputType="text"
+                android:maxLength="40"
+                android:padding="14dp"
+                android:singleLine="true"
+                android:textSize="18sp"></EditText>
+
+
+            <EditText
+                android:id="@+id/PasentAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/PasentHospitalNameID"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/profile_selected_button"
+                android:hint="Enter pasent number*"
+                android:inputType="phone"
+                android:maxLength="13"
+                android:padding="14dp"
+                android:singleLine="true"
+                android:textSize="18sp"></EditText>
+
+
+            <EditText
+                android:id="@+id/PasentPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_below="@id/PasentAddress"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/profile_selected_button"
+                android:gravity="start|left"
+                android:hint="Enter Address*"
+                android:inputType="phone"
+                android:maxLength="100"
+                android:padding="14dp"
+                android:textSize="18sp"></EditText>
 
             <RelativeLayout
-                android:layout_weight="1"
+                android:id="@+id/FirstPageButtonID"
                 android:layout_width="match_parent"
-                android:layout_height="0dp">
+                android:layout_height="50dp"
+                android:layout_below="@+id/PasentPhoneNumber"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/profile_button_invisiabe">
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:textColor="#8D8D8D"
-                    android:layout_marginRight="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="25dp"
-                    android:textSize="16sp"
                     android:fontFamily="sans-serif-smallcaps"
-                    android:text="@string/donor_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </com.google.android.material.textview.MaterialTextView>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_weight="2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp">
-
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:textSize="25sp"
-                    android:id="@+id/acadamicinfotextID"
+                    android:text="Continue"
                     android:textColor="@android:color/black"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:textStyle="bold"
-                    android:text="Enter your basic Info"
-                    android:layout_height="wrap_content">
+                    android:textSize="18sp">
+
                 </com.google.android.material.textview.MaterialTextView>
-
-
-                <EditText
-                    android:id="@+id/PasentNameID"
-                    android:singleLine="true"
-                    android:layout_below="@id/acadamicinfotextID"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
-                    android:maxLength="10"
-                    android:layout_width="match_parent"
-                    android:textSize="17sp"
-                    android:inputType="text"
-                    android:background="@drawable/profile_selected_button"
-                    android:padding="10dp"
-                    android:hint="Enter pasent name*"
-                    android:layout_height="wrap_content">
-                </EditText>
-
-
-                <EditText
-                    android:id="@+id/PasentAddress"
-                    android:singleLine="true"
-                    android:layout_below="@id/PasentNameID"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
-                    android:maxLength="10"
-                    android:layout_width="match_parent"
-                    android:textSize="17sp"
-                    android:inputType="phone"
-                    android:background="@drawable/profile_selected_button"
-                    android:padding="10dp"
-                    android:hint="Enter pasent number*"
-                    android:layout_height="wrap_content">
-                </EditText>
-
-
-
-                 <EditText
-                    android:id="@+id/PasentPhoneNumber"
-                    android:layout_below="@id/PasentAddress"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
-                    android:layout_width="match_parent"
-                     android:maxLength="50"
-                    android:textSize="17sp"
-                    android:inputType="phone"
-                    android:background="@drawable/profile_selected_button"
-                    android:padding="10dp"
-                     android:gravity="start|left"
-                    android:hint="Enter Address*"
-                    android:layout_height="90dp">
-                </EditText>
-
-                <RelativeLayout
-                    android:id="@+id/FirstPageButtonID"
-                    android:layout_below="@+id/PasentPhoneNumber"
-                    android:layout_marginRight="25dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_width="match_parent"
-                    android:background="@drawable/profile_button_invisiabe"
-                    android:layout_height="45dp">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_centerVertical="true"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@android:color/black"
-                        android:textSize="15sp"
-                        android:text="Continue"
-                        android:fontFamily="sans-serif-smallcaps"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                    </com.google.android.material.textview.MaterialTextView>
-
-                </RelativeLayout>
-
-
 
             </RelativeLayout>
 
 
 
-        </LinearLayout>
+        </RelativeLayout>
 
-
-    </RelativeLayout>
-
+    </ScrollView>
 </RelativeLayout>

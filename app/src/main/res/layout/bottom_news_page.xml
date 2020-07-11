@@ -1,8 +1,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white"
     tools:context="BootmNavPages.BottomNewsPage">
 
@@ -10,20 +10,193 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+        <RelativeLayout
+            android:id="@+id/TopLayoutContinerID"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:elevation="1dp">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/DayStatusTextID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Searching ..."
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/DayStatusTextID"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Mr Sajib Roy"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ProfileImageViewID"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/person_design">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/colorPrimary">
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/ButtomLayoutWave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/ic_wave_three">
+
+
+            </ImageView>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_wave_five">
+
+            </ImageView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/TopLayoutContinerID">
+
+            <RelativeLayout
+                android:id="@+id/ListborderID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <ImageView
+                    android:id="@+id/Listicon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/listcolour"></ImageView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/Listicon"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Blood Request List"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/ListBorderContinerID"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_below="@+id/ListborderID"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:background="#FFF6F6">
+
+            </View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ListBorderContinerID">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RequestListViewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/SearchingButtonID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="searching.json"
+                    app:lottie_loop="true"></com.airbnb.lottie.LottieAnimationView>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/NodataButtonID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="nopost.json"
+                    app:lottie_loop="true"></com.airbnb.lottie.LottieAnimationView>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/PostButtonID"
-            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginRight="16dp"
-            android:backgroundTint="@color/toolbarcolors"
-            app:tint="@android:color/white"
             android:layout_marginBottom="16dp"
-            app:icon="@drawable/add_icon"
+            android:backgroundTint="@color/toolbarcolors"
+            android:text="Add A Post"
             android:textColor="@android:color/white"
             android:textSize="12sp"
-            android:text="Add A Post"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            app:icon="@drawable/add_icon"
+            app:tint="@android:color/white">
 
         </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 

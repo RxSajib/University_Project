@@ -17,7 +17,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="30dp"
+            android:layout_margin="10dp"
             android:layout_above="@+id/MiddlelayoutID">
 
             <ImageView
@@ -65,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/NumberText"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:layout_marginBottom="50dp"
@@ -84,14 +84,14 @@
                 android:layout_width="match_parent"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="30dp"
                 android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/CodeNumberID"
                     android:background="@drawable/phone_number_edittext"
                     android:layout_width="70dp"
-                    android:padding="12dp"
+                    android:padding="11dp"
                     android:textSize="14sp"
                     android:textColor="@android:color/black"
                     android:hint="+880"
@@ -106,7 +106,7 @@
                     android:id="@+id/PhoneNumberID"
                     android:layout_toRightOf="@id/CodeNumberID"
                     android:layout_marginLeft="10dp"
-                    android:padding="12dp"
+                    android:padding="11dp"
                     android:inputType="phone"
                     android:singleLine="true"
                     android:textSize="14sp"

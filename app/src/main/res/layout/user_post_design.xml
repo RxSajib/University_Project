@@ -2,68 +2,479 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="7dp">
+    android:layout_margin="5dp"
+    android:elevation="3dp"
+    android:background="@drawable/request_post_background">
 
-    <com.google.android.material.card.MaterialCardView
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
 
         <RelativeLayout
+            android:layout_marginTop="7dp"
+            android:id="@+id/TopLayoutID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/BloodIconIDS"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bloodpost_icon">
+
+            </ImageView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/BloodIconIDS"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Blood Request"
+                android:textColor="@android:color/black"
+                android:textSize="20sp">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/shareicons">
+
+            </ImageView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/InprogressLayoutID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TopLayoutID"
+            android:layout_marginTop="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                android:background="@drawable/inprogress_button_design">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="In Progress"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/PasentDetailsID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/InprogressLayoutID"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/PasentDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/PTitile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patient: "
+                    android:textColor="#5D5D5D"
+                    android:textSize="17sp"
+                    android:textStyle="bold">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/PasentnameText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/PTitile"
+                    android:text="Sajib Roy"
+                    android:textColor="#5D5D5D"
+                    android:textSize="17sp"
+                    android:textStyle="normal">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/HospitalContinerID"
+                android:layout_marginTop="7dp"
+                android:layout_below="@+id/PasentDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/PHospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hospital: "
+                    android:textColor="#5D5D5D"
+                    android:textSize="17sp"
+                    android:textStyle="bold">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/PPHospitalText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/PHospital"
+                    android:text="TATA Medical center"
+                    android:textColor="#5D5D5D"
+                    android:textSize="17sp"
+                    android:textStyle="normal">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/UnitContiner"
+                android:layout_marginTop="7dp"
+                android:layout_below="@+id/HospitalContinerID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/PUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unit: "
+                    android:textColor="#5D5D5D"
+                    android:textSize="17sp"
+                    android:textStyle="bold">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/PUnit"
+                    android:text="10"
+                    android:id="@+id/UnitOfBlood"
+                    android:textColor="#5D5D5D"
+                    android:textSize="17sp"
+                    android:textStyle="normal">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/BloodTypeContinerID"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/PasentDetailsID"
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/BloodTyoe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Request Blood Type"
+                android:textColor="#5D5D5D"
+                android:textSize="14sp"
+                android:textStyle="bold">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <RelativeLayout
+                android:layout_below="@+id/BloodTyoe"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/AplusContiner"
+                        android:background="@drawable/request_blood_bac"
+                        android:layout_width="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="35dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/white"
+                            android:text="A+"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/AminusContiner"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/request_blood_bac"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/white"
+                            android:text="A-"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/BplusContiner"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/request_blood_bac"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/white"
+                            android:text="B+"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/BminusContiner"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/request_blood_bac"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/white"
+                            android:text="B-"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/ABplusContiner"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/request_blood_bac"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/white"
+                            android:text="AB+"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/AbminusContiner"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/request_blood_bac"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/white"
+                            android:text="AB-"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/OplusContinerID"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/request_blood_bac"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/white"
+                            android:text="O+"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/OminusContiner"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/request_blood_bac"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/white"
+                            android:text="O-"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/BloodTypeContinerID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_toLeftOf="@+id/DonateButtonID"
+                android:layout_width="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
                 android:layout_height="wrap_content">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/SuserprofileID"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/person_design">
+                <ImageView
+                    android:id="@+id/LocationID"
+                    android:layout_centerVertical="true"
+                    android:layout_width="25dp"
+                    android:src="@drawable/location_icons"
+                    android:layout_height="25dp">
 
-                </de.hdodenhof.circleimageview.CircleImageView>
-
+                </ImageView>
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@+id/SuserprofileID">
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/LocationID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="UserName"
-                        android:id="@+id/SusernameID"
-                        android:layout_marginBottom="3dp"
+                        android:gravity="center|left"
+                        android:textSize="14sp"
+                        android:id="@+id/PasentLocation"
                         android:textColor="@android:color/black"
-                        android:textSize="14sp">
-
-                    </com.google.android.material.textview.MaterialTextView>
-
-                    <com.google.android.material.textview.MaterialTextView
+                        android:text="West Point USAA Financial Center, NY 10928."
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="UserName"
-                        android:layout_marginTop="3dp"
-                        android:layout_below="@+id/SusernameID"
-                        android:textSize="10sp">
+                        android:layout_height="wrap_content">
 
                     </com.google.android.material.textview.MaterialTextView>
-
 
                 </RelativeLayout>
 
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/DonateButtonID"
+                android:background="@drawable/inprogress_button_design"
+                android:layout_width="110dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_height="40dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Donate"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
 
             </RelativeLayout>
 
         </RelativeLayout>
 
+    </RelativeLayout>
 
-    </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>

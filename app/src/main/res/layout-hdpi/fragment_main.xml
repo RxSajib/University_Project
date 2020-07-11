@@ -27,7 +27,7 @@
 
 
         <RelativeLayout
-            android:layout_above="@+id/ButtonLayoutID"
+            android:layout_above="@+id/welcometext"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -47,34 +47,6 @@
                     android:layout_height="wrap_content">
                 </ImageView>
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_below="@+id/getstartimageID"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="20sp"
-                    app:fontFamily="sans-serif-smallcaps"
-                    android:id="@+id/welcometext"
-                    android:textColor="@android:color/black"
-                    android:text="Welcome Again"
-                    android:fontFamily="sans-serif"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </com.google.android.material.textview.MaterialTextView>
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_below="@+id/welcometext"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginRight="35dp"
-                    android:gravity="center"
-                    android:textSize="16sp"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:layout_marginTop="10dp"
-                    android:text="Please continue with phone login to access all fetures also find quickly your blood continue with guest"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </com.google.android.material.textview.MaterialTextView>
 
 
             </RelativeLayout>
@@ -83,6 +55,40 @@
 
         </RelativeLayout>
 
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_above="@+id/MidText"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-smallcaps"
+            android:id="@+id/welcometext"
+            android:textColor="@android:color/black"
+            android:text="Welcome Again"
+            android:fontFamily="sans-serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_above="@+id/ButtonLayoutID"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="35dp"
+            android:id="@+id/MidText"
+            android:layout_marginRight="35dp"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:textSize="13sp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_marginTop="10dp"
+            android:text="Please continue with phone login to access all fetures also find quickly your blood continue with guest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
 
 
 
@@ -109,7 +115,6 @@
 
                 <RelativeLayout
                     android:background="@drawable/dasboard_phone_button_ripple"
-
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 

@@ -17,14 +17,46 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:background="@drawable/dashboard_top_background"
-            android:layout_height="150dp">
+            android:layout_height="170dp">
+
+
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/ButtomLayoutWave"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/ic_wave_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </ImageView>
+
+
+            <ImageView
+                android:layout_marginTop="70dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_wave_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ImageView>
+
+
+
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_centerVertical="true"
+                android:layout_marginTop="30dp"
                 android:layout_height="wrap_content">
 
                 <LinearLayout
@@ -45,7 +77,7 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/NewDonorRequestCounterText"
-                                android:textSize="20sp"
+                                android:textSize="25sp"
                                 android:textColor="@android:color/white"
                                 android:text="200"
                                 android:layout_centerHorizontal="true"
@@ -78,7 +110,7 @@
                                 android:paddingTop="3dp"
                                 android:paddingBottom="3dp"
                                 android:text="See All"
-                                android:textSize="10sp"
+                                android:textSize="12sp"
                                 android:layout_height="wrap_content">
 
                             </com.google.android.material.textview.MaterialTextView>
@@ -105,7 +137,7 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/NewchatRequestID"
-                                android:textSize="20sp"
+                                android:textSize="25sp"
                                 android:textColor="@android:color/white"
                                 android:text="50"
                                 android:layout_centerHorizontal="true"
@@ -138,7 +170,7 @@
                                 android:paddingTop="3dp"
                                 android:paddingBottom="3dp"
                                 android:text="See All"
-                                android:textSize="10sp"
+                                android:textSize="12sp"
                                 android:layout_height="wrap_content">
 
                             </com.google.android.material.textview.MaterialTextView>
@@ -168,204 +200,214 @@
         </RelativeLayout>
 
 
+        <HorizontalScrollView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:scrollbars="none"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/SearchButtonID"
+                    android:layout_width="120dp"
+                    android:elevation="3dp"
+                    android:background="@drawable/more_design"
+                    android:layout_height="140dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/BloodiconID"
+                            android:src="@drawable/bloodsearch_red"
+                            android:layout_width="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="60dp">
+                        </ImageView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_below="@+id/BloodiconID"
+                            android:layout_width="wrap_content"
+                            android:textSize="17sp"
+                            android:id="@+id/SearhTextID"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#FB797C"
+                            android:text="Search"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/StokeButtonID"
+                    android:layout_width="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:elevation="3dp"
+                    android:background="@drawable/more_design"
+                    android:layout_height="140dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/BloodStoke"
+                            android:src="@drawable/injectionred"
+                            android:layout_width="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="60dp">
+                        </ImageView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_below="@+id/BloodStoke"
+                            android:id="@+id/StokeTextID"
+                            android:layout_width="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#FB797C"
+                            android:text="Stoke"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RequestButtonID"
+                    android:layout_width="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:elevation="3dp"
+                    android:background="@drawable/more_design"
+                    android:layout_height="140dp">
+
+                    <RelativeLayout
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/BloodRequest"
+                                android:src="@drawable/postredicon"
+                                android:layout_width="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="60dp">
+                            </ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_below="@+id/BloodRequest"
+                                android:id="@+id/DashBoardTextID"
+                                android:layout_width="wrap_content"
+                                android:textSize="17sp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#FB797C"
+                                android:text="Request"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/SettingsButtonID"
+                    android:layout_width="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:elevation="3dp"
+                    android:background="@drawable/more_design"
+                    android:layout_height="140dp">
+
+                    <RelativeLayout
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/Settingicon"
+                                android:src="@drawable/settings"
+                                android:layout_width="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="60dp">
+                            </ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_below="@+id/Settingicon"
+                                android:layout_width="wrap_content"
+                                android:textSize="17sp"
+                                android:id="@+id/SettingsTextID"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#FB797C"
+                                android:text="Settings"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </HorizontalScrollView>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <HorizontalScrollView
-                android:layout_alignParentBottom="true"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="10dp"
-                android:scrollbars="none"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:text="normal"
                 android:layout_height="wrap_content">
 
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <RelativeLayout
-                        android:id="@+id/SearchButtonID"
-                        android:layout_width="120dp"
-                        android:elevation="3dp"
-                        android:background="@drawable/more_design"
-                        android:layout_height="140dp">
-
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_height="wrap_content">
-
-                            <ImageView
-                                android:id="@+id/BloodiconID"
-                                android:src="@drawable/bloodsearch_red"
-                                android:layout_width="60dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_height="60dp">
-                            </ImageView>
-
-                            <com.google.android.material.textview.MaterialTextView
-                                android:layout_below="@+id/BloodiconID"
-                                android:layout_width="wrap_content"
-                                android:textSize="17sp"
-                                android:id="@+id/SearhTextID"
-                                android:layout_centerHorizontal="true"
-                                android:textColor="#FB797C"
-                                android:text="Search"
-                                android:layout_marginTop="5dp"
-                                android:layout_height="wrap_content">
-
-                            </com.google.android.material.textview.MaterialTextView>
-
-                        </RelativeLayout>
-
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/StokeButtonID"
-                        android:layout_width="120dp"
-                        android:layout_marginLeft="10dp"
-                        android:elevation="3dp"
-                        android:background="@drawable/more_design"
-                        android:layout_height="140dp">
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:layout_height="wrap_content">
-
-                            <ImageView
-                                android:id="@+id/BloodStoke"
-                                android:src="@drawable/injectionred"
-                                android:layout_width="60dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_height="60dp">
-                            </ImageView>
-
-                            <com.google.android.material.textview.MaterialTextView
-                                android:layout_below="@+id/BloodStoke"
-                                android:id="@+id/StokeTextID"
-                                android:layout_width="wrap_content"
-                                android:textSize="17sp"
-                                android:layout_centerHorizontal="true"
-                                android:textColor="#FB797C"
-                                android:text="Stoke"
-                                android:layout_marginTop="5dp"
-                                android:layout_height="wrap_content">
-
-                            </com.google.android.material.textview.MaterialTextView>
-
-                        </RelativeLayout>
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/RequestButtonID"
-                        android:layout_width="120dp"
-                        android:layout_marginLeft="10dp"
-                        android:elevation="3dp"
-                        android:background="@drawable/more_design"
-                        android:layout_height="140dp">
-
-                        <RelativeLayout
-                            android:layout_centerVertical="true"
-                            android:layout_centerHorizontal="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-
-                                <ImageView
-                                    android:id="@+id/BloodRequest"
-                                    android:src="@drawable/postredicon"
-                                    android:layout_width="60dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_height="60dp">
-                                </ImageView>
-
-                                <com.google.android.material.textview.MaterialTextView
-                                    android:layout_below="@+id/BloodRequest"
-                                    android:id="@+id/DashBoardTextID"
-                                    android:layout_width="wrap_content"
-                                    android:textSize="17sp"
-                                    android:layout_centerHorizontal="true"
-                                    android:textColor="#FB797C"
-                                    android:text="Request"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_height="wrap_content">
-
-                                </com.google.android.material.textview.MaterialTextView>
-
-                            </RelativeLayout>
-
-                        </RelativeLayout>
-
-                    </RelativeLayout>
-
-
-                    <RelativeLayout
-                        android:id="@+id/SettingsButtonID"
-                        android:layout_width="120dp"
-                        android:layout_marginLeft="10dp"
-                        android:elevation="3dp"
-                        android:background="@drawable/more_design"
-                        android:layout_height="140dp">
-
-                        <RelativeLayout
-                            android:layout_centerVertical="true"
-                            android:layout_centerHorizontal="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-
-                                <ImageView
-                                    android:id="@+id/Settingicon"
-                                    android:src="@drawable/settings"
-                                    android:layout_width="60dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_height="60dp">
-                                </ImageView>
-
-                                <com.google.android.material.textview.MaterialTextView
-                                    android:layout_below="@+id/Settingicon"
-                                    android:layout_width="wrap_content"
-                                    android:textSize="17sp"
-                                    android:id="@+id/SettingsTextID"
-                                    android:layout_centerHorizontal="true"
-                                    android:textColor="#FB797C"
-                                    android:text="Settings"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_height="wrap_content">
-
-                                </com.google.android.material.textview.MaterialTextView>
-
-                            </RelativeLayout>
-
-                        </RelativeLayout>
-
-                    </RelativeLayout>
-
-
-                </LinearLayout>
-
-
-
-
-            </HorizontalScrollView>
+            </TextView>
 
 
         </RelativeLayout>
