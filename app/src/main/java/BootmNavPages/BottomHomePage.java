@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -41,13 +42,17 @@ public class BottomHomePage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_dashboard, container, false);
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
 
         searchbutton = view.findViewById(R.id.SearchButtonID);
+        searchbutton.setAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.sendder_message_faidin_anim));
         stokebutton = view.findViewById(R.id.StokeButtonID);
+        stokebutton.setAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.sendder_message_faidin_anim));
         requestbutton = view.findViewById(R.id.RequestButtonID);
+        requestbutton.setAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.sendder_message_faidin_anim));
         settingbutton = view.findViewById(R.id.SettingsButtonID);
+        settingbutton.setAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.sendder_message_faidin_anim));
 
         /// handle text
         searchtext = view.findViewById(R.id.SearhTextID);
@@ -145,7 +150,6 @@ public class BottomHomePage extends Fragment {
 
         return view;
     }
-
 
 
 }

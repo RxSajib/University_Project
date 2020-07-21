@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ProfileImageIDs"
+        android:layout_width="80dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/person_design"
+        android:layout_height="80dp">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+    <RelativeLayout
+        android:layout_toRightOf="@id/ProfileImageIDs"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="35dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/blood_oval"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="35dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:textSize="13sp"
+                            android:layout_centerVertical="true"
+                            android:text="AB+"
+                            android:id="@+id/Group"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/UserNameTextID"
+                        android:text="Mr Sajib Roy"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_below="@+id/UserNameTextID"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/DeptID"
+                        android:textSize="12sp"
+                        android:text="Computer Seience"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <RelativeLayout
+                    android:background="@drawable/phone_number_design"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:textSize="13sp"
+                        android:padding="7dp"
+                        android:id="@+id/UserNumber"
+                        android:text="Aks For Number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

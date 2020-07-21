@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="DrawerPage.FeedbackPage">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/FeedbackToolbarID"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/BackArrawID"
+                android:src="@drawable/backarraw_icon"
+                android:layout_width="25dp"
+                android:layout_centerVertical="true"
+                android:layout_height="25dp">
+
+            </ImageView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Feedback"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/BackArrawID"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/FeedbackToolbarID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

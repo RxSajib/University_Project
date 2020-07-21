@@ -1,0 +1,234 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ChatPage.ChatPages">
+
+    
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            app:cardCornerRadius="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:id="@+id/ToolbarID"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <ImageButton
+                    android:id="@+id/BookmarButonID"
+                    android:layout_width="25dp"
+                    android:background="@null"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/heart_white">
+
+                </ImageButton>
+
+
+
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/ChatUser"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_centerHorizontal="true"
+                        android:text="Unknown User"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_below="@+id/ChatUser"
+                        android:layout_marginTop="2dp"
+                        android:textSize="12sp"
+                        android:text="Online Now"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@android:color/white"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                </RelativeLayout>
+
+
+                <ImageButton
+                    android:id="@+id/backButtonID"
+                    android:background="@null"
+                    android:layout_width="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="25dp"
+                    android:src="@drawable/backarraw_icon">
+
+                </ImageButton>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_below="@+id/ToolbarID"
+            android:background="@color/colorPrimary"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/MessageListViewID"
+                    android:layout_width="match_parent"
+                    android:layout_above="@+id/ButtomLayoutIDs"
+                    android:layout_height="match_parent">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_above="@+id/ButtomLayoutIDs"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="45dp"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="typingfour.json"
+                    android:layout_height="40dp">
+
+                </com.airbnb.lottie.LottieAnimationView>
+
+                <RelativeLayout
+                    android:id="@+id/ButtomLayoutIDs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/message_input_background">
+
+
+                        <ImageView
+                            android:id="@+id/AssetsIconID"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="0.1dp"
+                            android:src="@drawable/assets_icon_black">
+                        </ImageView>
+
+                        <ImageView
+                            android:id="@+id/SendButtonID"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:elevation="0.1dp"
+                            android:src="@drawable/send_button_black">
+                        </ImageView>
+
+                        <EditText
+                            android:id="@+id/InputMessageID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:hint="Enter Message"
+                            android:layout_toLeftOf="@+id/SendButtonID"
+                            android:maxLength="100"
+                            android:layout_toRightOf="@+id/AssetsIconID"
+                            android:background="@drawable/message_input_background"
+                            android:padding="12dp">
+                        </EditText>
+
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</FrameLayout>

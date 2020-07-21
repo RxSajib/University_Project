@@ -24,6 +24,9 @@ public class Depertment_bottom_sheed extends BottomSheetDialogFragment {
 
     private String depetment[] = {"Business Administration", "Pharmacy", "Micro Biology", "Environmental Science", "English", "Economics", "Film and Media Studies", "Journalism and Media Studies",
             "Public Administration", "Law", "Computer Science", "Electrical & Electronic Engineering", "Civil Engineering", "Architecture"};
+
+
+
     private BottomsheedLisiner mlisiner;
     private DatabaseReference MuserDatabase;
     private FirebaseAuth Mauth;

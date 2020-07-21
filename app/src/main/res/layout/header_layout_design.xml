@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white"
-    android:layout_margin="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginBottom="15dp"
     android:layout_height="wrap_content">
 
 
@@ -25,7 +27,7 @@
 
         <ImageView
             android:layout_centerVertical="true"
-            android:src="@drawable/camera_icon"
+            android:src="@drawable/camera_update"
             android:layout_centerHorizontal="true"
             android:layout_width="30dp"
             android:layout_height="30dp">
@@ -36,9 +38,9 @@
 
 
     <RelativeLayout
-        android:layout_toRightOf="@id/rootlayout"
+        android:layout_below="@+id/rootlayout"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -47,10 +49,10 @@
             android:layout_width="wrap_content"
             android:id="@+id/navprofilenameID"
             android:textSize="18sp"
-            app:fontFamily="sans-serif-smallcaps"
+            app:fontFamily="sans-serif-condensed"
             android:layout_marginBottom="5dp"
             android:text="Mr Sajib Roy"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/black"
             android:layout_height="wrap_content">
         </com.google.android.material.textview.MaterialTextView>
 
@@ -62,8 +64,7 @@
             android:textSize="14sp"
             app:fontFamily="sans-serif"
             android:text="Blood Group: AB+"
-            android:layout_marginTop="5dp"
-            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginTop="3dp"
             android:layout_height="wrap_content">
         </com.google.android.material.textview.MaterialTextView>
 

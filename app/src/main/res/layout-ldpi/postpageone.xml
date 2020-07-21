@@ -145,7 +145,7 @@
                 android:background="@drawable/profile_selected_button"
                 android:gravity="start|left"
                 android:hint="Enter Address*"
-                android:inputType="phone"
+                android:inputType="text"
                 android:maxLength="100"
                 android:padding="10dp"
                 android:textSize="15sp"></EditText>

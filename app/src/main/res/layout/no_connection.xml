@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/NoInterntAnimaction"
+            android:layout_width="300dp"
+            app:lottie_fileName="connectionlost.json"
+            app:lottie_autoPlay="true"
+            android:layout_centerHorizontal="true"
+            app:lottie_loop="true"
+            android:layout_height="300dp">
+
+        </com.airbnb.lottie.LottieAnimationView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/LongText"
+            android:layout_below="@id/NoInterntAnimaction"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Please check internet connection\nand try again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/LongText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/WifiButtonID"
+                android:background="@drawable/wifi_button_background"
+                android:layout_width="130dp"
+                android:layout_marginRight="25dp"
+                android:layout_height="50dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@android:color/white"
+                    android:text="On Wifi"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_toRightOf="@+id/WifiButtonID"
+                android:background="@drawable/cancel_button_design"
+                android:layout_width="130dp"
+                android:layout_marginLeft="25dp"
+                android:layout_height="50dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@android:color/white"
+                    android:text="Cancel"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

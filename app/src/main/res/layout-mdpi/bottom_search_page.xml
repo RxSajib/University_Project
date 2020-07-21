@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,107 +14,144 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:background="@color/colorPrimary">
+            android:layout_height="170dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary">
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/ButtomLayoutWave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/ic_wave_three">
+
+
+            </ImageView>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/ic_wave_five">
+
+            </ImageView>
 
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/SearchContinrID"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/search_top_background"
-            android:elevation="10dp">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/FindTextID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="Find Donors"
-                android:textColor="@android:color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"></com.google.android.material.textview.MaterialTextView>
+            android:elevation="3dp"
+            app:cardCornerRadius="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_above="@+id/SearchButtonID"
-                android:layout_below="@+id/FindTextID"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
+                android:layout_height="match_parent">
 
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/FindTextID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Find Donors"
+                    android:textColor="#4C4C4C"
+                    android:textSize="16sp"
+                    android:textStyle="bold"></com.google.android.material.textview.MaterialTextView>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true">
-
-
-                    <RelativeLayout
-                        android:id="@+id/DepertmentSearchID"
-                        android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@drawable/search_ackground">
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="10dp"
-                            android:text="Depertment"
-                            android:textSize="13sp">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="10dp"
-                            android:src="@drawable/depertmet_icon">
-
-                        </ImageView>
-
-                    </RelativeLayout>
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/SearchButtonID"
+                    android:layout_below="@+id/FindTextID"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
 
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:layout_below="@+id/DepertmentSearchID"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/search_ackground">
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp">
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="10dp"
-                            android:text="Blood Group"
-                            android:textSize="13sp">
 
-                        </com.google.android.material.textview.MaterialTextView>
+                        <RelativeLayout
+                            android:id="@+id/DepertmentSearchID"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/search_ackground">
 
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="10dp"
-                            android:src="@drawable/group_icon">
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:text="Depertment"
+                                android:textSize="15sp">
 
-                        </ImageView>
+                            </com.google.android.material.textview.MaterialTextView>
+
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/arraw">
+
+                            </ImageView>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/DepertmentSearchID"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/search_ackground">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:text="Blood Group"
+                                android:textSize="15sp">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/arraw">
+
+                            </ImageView>
+
+                        </RelativeLayout>
+
 
                     </RelativeLayout>
 
@@ -121,70 +159,98 @@
                 </RelativeLayout>
 
 
+                <RelativeLayout
+                    android:id="@+id/SearchButtonID"
+                    android:layout_width="130dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/search_button_back"
+                    android:text="Search">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="sans-serif"
+                        android:text="Search"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                </RelativeLayout>
+
+
             </RelativeLayout>
 
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/SearchButtonID"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="13sp"
-                android:text="Search">
-
-            </com.google.android.material.button.MaterialButton>
-
-        </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <RelativeLayout
+            android:id="@+id/BloodList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:layout_below="@+id/SearchContinrID"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="15dp">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/AvabaleBloodTextID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:text="Available Blood"
-                android:textSize="13sp">
-
-            </com.google.android.material.textview.MaterialTextView>
-
-            <ScrollView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="5dp"
-                android:scrollbars="none"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/AvabaleBloodTextID">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
+
+                <RelativeLayout
+                    android:id="@+id/AvableBloodTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/AvabaleBloodTextID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Available Blood"
+                        android:textSize="10sp">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/AvabaleBloodTextID"
+                        android:background="#B5B5B5">
+
+                    </View>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <include layout="@layout/user_design"></include>
-
-                    <include layout="@layout/user_design"></include>
-
-                    <include layout="@layout/user_design"></include>
-
-                    <include layout="@layout/user_design"></include>
-
-                    <include layout="@layout/user_design"></include>
-
-                    <include layout="@layout/user_design"></include>
+                    android:layout_below="@+id/AvableBloodTxt"
+                    android:layout_marginTop="5dp">
 
 
-                </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/BloodListViewID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
 
-            </ScrollView>
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
 
 
         </RelativeLayout>

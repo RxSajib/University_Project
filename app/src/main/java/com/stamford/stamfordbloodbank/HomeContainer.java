@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 
 public class HomeContainer extends AppCompatActivity {
@@ -16,8 +18,13 @@ public class HomeContainer extends AppCompatActivity {
         setContentView(R.layout.activity_home_container);
 
 
-
-
+       /* if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            getWindow().setStatusBarColor(getResources().getColor(R.color.colorAccent));
+        }
+        else {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.colorAccent));
+        }
+*/
         Setup_Layout(new HomePages());
     }
 

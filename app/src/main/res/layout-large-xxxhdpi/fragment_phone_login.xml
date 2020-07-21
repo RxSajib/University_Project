@@ -132,7 +132,6 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginRight="30dp"
-            android:elevation="0.2dp"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/logindesign"
@@ -155,6 +154,7 @@
                 android:layout_height="25dp"
                 android:layout_centerVertical="true"
                 android:indeterminate="true"
+                android:visibility="gone"
                 android:progressDrawable="@drawable/progressbar_background"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp">

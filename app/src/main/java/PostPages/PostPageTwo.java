@@ -227,6 +227,7 @@ public class PostPageTwo extends Fragment {
             postmap.put("location", location);
             postmap.put("unitof_blood", unitof_blood);
             postmap.put("bloodgroup", bloodgroup);
+            postmap.put("UID", CurrentUserID);
 
             Mpost_data.push().updateChildren(postmap)
                     .addOnCompleteListener(new OnCompleteListener<Void>() {

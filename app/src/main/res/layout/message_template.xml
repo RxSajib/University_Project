@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+
+
+    <RelativeLayout
+        android:id="@+id/SenderMessageLayoutID"
+        android:visibility="visible"
+        android:layout_marginTop="5dp"
+        android:elevation="0.1dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/sender_message_design"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_margin="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/SenderMessageTime"
+                android:textColor="@android:color/black"
+                android:text="12:00 PM"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:textSize="13sp"
+                android:id="@+id/SenderMessae"
+                android:textColor="#3A3A3A"
+                android:layout_below="@+id/SenderMessageTime"
+                android:layout_marginTop="2dp"
+                android:text="the larger and eastern part of the Bengal region.[16] According to the ancient sacred Indian texts, Ramayana and Mahabharata, the Vanga Kingdom, one of the namesakes of the Bengal region,"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:elevation="0.1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/ReciverMessageLayout"
+        android:visibility="gone"
+        android:background="@drawable/reciver_message_design"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_margin="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/ReciverMessageTimeID"
+                android:textColor="@android:color/black"
+                android:text="12:00 PM"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:textSize="13sp"
+                android:id="@+id/ReciverMessage"
+                android:textColor="#3A3A3A"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/ReciverMessageTimeID"
+                android:text="Hey, folks. Here is a question for you: why all new messages appear at the bottom of the screen in all messaging apps,"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

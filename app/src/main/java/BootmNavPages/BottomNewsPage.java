@@ -28,11 +28,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 import com.stamford.stamfordbloodbank.R;
 
 import java.util.Calendar;
 
 import All_PogoClass.Requestgetset;
+import ChatPage.ChatPages;
 import DonatePage.DonarPage;
 import PostPages.PostContiner;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -51,6 +53,11 @@ public class BottomNewsPage extends Fragment {
 
     private MaterialTextView day_status;
 
+    private DatabaseReference MuserDatabase;
+    private CircleImageView profileimageview;
+    private MaterialTextView username;
+
+
     public BottomNewsPage() {
         // Required empty public constructor
     }
@@ -63,6 +70,8 @@ public class BottomNewsPage extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.bottom_news_page, container, false);
 
+        username = view.findViewById(R.id.UserNameView);
+        profileimageview = view.findViewById(R.id.ProfileImageViewID);
         searching = view.findViewById(R.id.SearchingButtonID);
         nopost = view.findViewById(R.id.NodataButtonID);
 
@@ -72,6 +81,8 @@ public class BottomNewsPage extends Fragment {
 
         Mauth = FirebaseAuth.getInstance();
         CurrentuserID = Mauth.getCurrentUser().getUid();
+
+        MuserDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
 
         Mpost_database = FirebaseDatabase.getInstance().getReference().child("BloodRequest");
         list = view.findViewById(R.id.RequestListViewID);
@@ -138,11 +149,19 @@ public class BottomNewsPage extends Fragment {
         }
 
 
+        get_profiledata();
+
         return view;
     }
 
-    private void goto_full_details(Fragment fragment){
+    private void goto_full_details(Fragment fragment, String UID){
+
+        Bundle bundle = new Bundle();
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+
+        bundle.putString("UID", UID);
+        fragment.setArguments(bundle);
+
         fragmentTransaction.replace(R.id.HomeContinerID, fragment).addToBackStack(null);
         fragmentTransaction.commit();
     }
@@ -160,11 +179,11 @@ public class BottomNewsPage extends Fragment {
         ) {
             @Override
             protected void populateViewHolder(final RequestListHolder requestListHolder, final Requestgetset requestgetset, int i) {
-                String UID = getRef(i).getKey();
+                final String UID = getRef(i).getKey();
                 Mpost_database.child(UID)
                         .addValueEventListener(new ValueEventListener() {
                             @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
+                            public void onDataChange(final DataSnapshot dataSnapshot) {
                                 if(dataSnapshot.exists()){
 
                                     searching.setVisibility(View.GONE);
@@ -256,9 +275,62 @@ public class BottomNewsPage extends Fragment {
                                     requestListHolder.donate_button.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View view) {
-                                            goto_full_details(new DonarPage());
+                                            goto_full_details(new DonarPage(),UID);
                                         }
                                     });
+
+                                    requestListHolder.Mview.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+
+                                        }
+                                    });
+/*
+                                    if(dataSnapshot.hasChild("UID")){
+                                        String postuid = dataSnapshot.child("UID").getValue().toString();
+
+                                        requestListHolder.Mview.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+
+
+                                                if(postuid.equals(CurrentuserID)){
+                                                    Toast.makeText(getActivity(), "myuid", Toast.LENGTH_LONG).show();
+                                                }
+                                                else {
+                                                    /// hear uid get another page
+                                                    goto_chat(new ChatPages(), postuid);
+                                                }
+                                            }
+                                        });
+
+
+                                    }*/
+
+
+
+
+                                            if(dataSnapshot.hasChild("UID")){
+                                               final String postuid = dataSnapshot.child("UID").getValue().toString();
+
+                                                if(postuid.equals(CurrentuserID)){
+                                                    Toast.makeText(getActivity(), "myuid", Toast.LENGTH_LONG).show();
+                                                }
+                                                else {
+
+                                                    requestListHolder.Mview.setOnClickListener(new View.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(View view) {
+
+                                                            goto_chat(new ChatPages(), postuid);
+
+                                                        }
+
+                                                        });
+                                                }
+
+                                        }
+
 
                                 }
                                 else {
@@ -332,5 +404,59 @@ public class BottomNewsPage extends Fragment {
         public void setLocationset(String loc){
             location.setText(loc);
         }
+    }
+
+    private void get_profiledata(){
+        MuserDatabase.child(CurrentuserID)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists()){
+                           if(dataSnapshot.hasChild("Imageuri")){
+                               String uri = dataSnapshot.child("Imageuri").getValue().toString();
+                               Picasso.with(getActivity()).load(uri).placeholder(R.drawable.person_design).into(profileimageview);
+                           }
+                           if(dataSnapshot.hasChild("Username")){
+
+                               String nameget = dataSnapshot.child("Username").getValue().toString();
+                               username.setText(nameget);
+
+                               if(dataSnapshot.hasChild("Gender")){
+                                   String sex = dataSnapshot.child("Gender").getValue().toString();
+
+                                   if(sex.equals("Female")){
+                                       username.setText("Mis "+nameget);
+                                   }
+                                   if(sex.equals("Male")){
+                                       username.setText("Mr "+nameget);
+                                   }
+                               }
+                           }
+                        }
+                        else {
+                            Toast.makeText(getContext(), "No users found", Toast.LENGTH_LONG).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+    }
+
+    private void goto_chat(Fragment fragment, String UID){
+
+        Bundle bundle = new Bundle();
+        bundle.putString("UID", UID);
+        fragment.setArguments(bundle);
+  //      Toast.makeText(getActivity(), UID, Toast.LENGTH_LONG).show();
+
+        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+
+
+        fragmentTransaction.setCustomAnimations(R.anim.slider_from_right    , R.anim.slide_outfrom_left);
+        fragmentTransaction.replace(R.id.HomeContinerID, fragment).addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

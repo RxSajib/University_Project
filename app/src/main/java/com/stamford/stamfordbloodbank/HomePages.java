@@ -1,6 +1,7 @@
 package com.stamford.stamfordbloodbank;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
@@ -27,10 +29,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import AllDrawerPages.StokePages;
 import BootmNavPages.BottomHomePage;
 import BootmNavPages.BottomInboxPage;
 import BootmNavPages.BottomNewsPage;
 import BootmNavPages.BottomSearchPage;
+import DrawerPage.FeedbackPage;
+import MyProfile.MyProfiele;
 import ProfilePages.ProfileSetActivity;
 import meow.bottomnavigation.MeowBottomNavigation;
 
@@ -57,6 +62,8 @@ public class HomePages extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_home_pages, container, false);
+
+
 
         open_default_page(new BottomHomePage());
 
@@ -86,6 +93,8 @@ public class HomePages extends Fragment {
                 if(item.getItemId() == R.id.NotifactionID){
                     notifaction_page(new BottomNewsPage());
                 }
+
+
 
                 return true;
             }
@@ -134,6 +143,27 @@ public class HomePages extends Fragment {
                     startActivity(intent);
                 }
 
+                if(item.getItemId() == R.id.FeedBackID){
+                    drawerLayout.closeDrawer(Gravity.LEFT);
+                    drawerLayout.setClickable(true);
+
+                    goto_Feedback_page(new FeedbackPage());
+                }
+
+                if(item.getItemId() == R.id.StokeID){
+                    drawerLayout.closeDrawer(Gravity.LEFT);
+                    drawerLayout.setClickable(true);
+
+                    goto_stoke(new StokePages());
+                }
+
+                if(item.getItemId() == R.id.ProfileID){
+                    drawerLayout.closeDrawer(Gravity.LEFT);
+                    drawerLayout.setClickable(true);
+
+                    goto_profilepage(new MyProfiele());
+                }
+
                 return true;
             }
         });
@@ -177,6 +207,12 @@ public class HomePages extends Fragment {
     private void open_default_page(Fragment fragment){
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.HomePageFreamID, fragment);
+        fragmentTransaction.commit();
+    }
+
+    private void goto_profilepage(Fragment fragment){
+        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.HomeContinerID, fragment).addToBackStack(null);
         fragmentTransaction.commit();
     }
 
@@ -226,5 +262,21 @@ public class HomePages extends Fragment {
         fragmentTransaction.commit();
     }*/
 
+
+   private void goto_Feedback_page(Fragment fragment){
+       FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+       fragmentTransaction.setCustomAnimations(R.anim.slider_from_right    , R.anim.slide_outfrom_left);
+       fragmentTransaction.replace(R.id.HomeContinerID, fragment).addToBackStack(null);
+
+       fragmentTransaction.commit();
+
+   }
+
+   private void goto_stoke(Fragment fragment){
+       FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+       transaction.setCustomAnimations(R.anim.slider_from_right    , R.anim.slide_outfrom_left);
+       transaction.replace(R.id.HomeContinerID, fragment).addToBackStack(null);
+       transaction.commit();
+   }
 
 }

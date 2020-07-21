@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:textSize="18sp"
+                    android:textSize="15sp"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Donation Details"
                     android:layout_centerVertical="true"
@@ -37,9 +37,9 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="10dp"
                     android:layout_centerVertical="true"
-                    android:layout_width="25dp"
+                    android:layout_width="20dp"
                     android:src="@drawable/shareiconwhite"
-                    android:layout_height="25dp">
+                    android:layout_height="20dp">
 
                 </ImageView>
 
@@ -53,372 +53,313 @@
             android:layout_below="@id/DonarPageToolbarID">
 
 
-            <RelativeLayout
+            <ScrollView
+                android:scrollbars="none"
+                android:layout_above="@+id/CheackBoxID"
+                android:id="@+id/ScrallViewID"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_above="@+id/NowDonateButtonID">
+                android:layout_height="wrap_content">
 
 
                 <RelativeLayout
-                    android:id="@+id/TopContinerID"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@drawable/request_post_background"
-                    android:elevation="5dp"
-                    android:padding="10dp">
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/NowDonateButtonID">
+
 
                     <RelativeLayout
-                        android:id="@+id/UnitContainerID"
+                        android:id="@+id/TopContinerID"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="7dp"
-                        android:layout_marginBottom="5dp">
-
-                        <ImageView
-                            android:id="@+id/OrderBoxID"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerVertical="true"
-                            android:src="@drawable/agenda"></ImageView>
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_toRightOf="@+id/OrderBoxID"
-                            android:fontFamily="sans-serif-condensed"
-                            android:text="Remaining Unit"
-                            android:textColor="@android:color/black"
-                            android:textSize="18sp">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/UnitContainerID"
-                        android:layout_marginTop="7dp">
-
-
-                        <ProgressBar
-                            android:indeterminate="true"
-                            android:id="@+id/progressBar2"
-                            style="?android:attr/progressBarStyleHorizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-
-                    </RelativeLayout>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/LayoutTwoContiner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/TopContinerID"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@drawable/request_post_background"
-                    android:elevation="5dp"
-                    android:padding="7dp">
-
-                    <RelativeLayout
-                        android:id="@+id/TopLayoutID"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:id="@+id/BloodIconIDS"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerVertical="true"
-                            android:src="@drawable/bloodpost_icon">
-
-                        </ImageView>
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="15dp"
-                            android:layout_toRightOf="@+id/BloodIconIDS"
-                            android:fontFamily="sans-serif-condensed-medium"
-                            android:text="Blood Request"
-                            android:textColor="@android:color/black"
-                            android:textSize="20sp">
-
-                        </com.google.android.material.textview.MaterialTextView>
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/request_post_background"
+                        android:padding="5dp">
 
                         <RelativeLayout
-                            android:layout_width="wrap_content"
+                            android:id="@+id/UnitContainerID"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="0dp">
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+
+                            <ImageView
+                                android:id="@+id/OrderBoxID"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/agenda"></ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/OrderBoxID"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Remaining Unit"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/UnitContainerID"
+                            android:layout_marginTop="5dp">
+
+
+                            <ProgressBar
+                                android:indeterminate="true"
+                                android:id="@+id/progressBar2"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/LayoutTwoContiner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/TopContinerID"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/request_post_background"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/TopLayoutID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/BloodIconIDS"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/bloodpost_icon">
+
+                            </ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:layout_toRightOf="@+id/BloodIconIDS"
+                                android:fontFamily="sans-serif-condensed-medium"
+                                android:text="Blood Request"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp">
+
+                            </com.google.android.material.textview.MaterialTextView>
 
                             <RelativeLayout
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
                                 android:layout_centerVertical="true"
-                                android:layout_marginLeft="7dp"
-                                android:layout_toRightOf="@+id/Callicon"
-                                android:background="@drawable/call_design">
+                                android:layout_marginRight="0dp">
+
+                                <RelativeLayout
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_toRightOf="@+id/Callicon"
+                                    android:background="@drawable/call_design">
+
+                                    <ImageView
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/call_icon_white">
+
+                                    </ImageView>
+
+                                </RelativeLayout>
 
                                 <ImageView
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_centerVertical="true"
-                                    android:src="@drawable/call_icon_white">
+                                    android:id="@+id/Callicon"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/person_design">
 
                                 </ImageView>
 
                             </RelativeLayout>
 
-                            <ImageView
-                                android:id="@+id/Callicon"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:src="@drawable/person_design">
-
-                            </ImageView>
 
                         </RelativeLayout>
 
+                        <RelativeLayout
+                            android:id="@+id/LayoutTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TopLayoutID"
+                            android:layout_marginTop="5dp">
 
-                    </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="130dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/inprogress_button_design">
 
-                    <RelativeLayout
-                        android:id="@+id/LayoutTwo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/TopLayoutID"
-                        android:layout_marginTop="7dp">
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="In Progress"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="15sp">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
 
                         <RelativeLayout
-                            android:layout_width="170dp"
-                            android:layout_height="40dp"
-                            android:background="@drawable/inprogress_button_design">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/LayoutTwo"
+                            android:layout_marginTop="5dp">
 
                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/PasentName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:text="In Progress"
-                                android:textColor="@android:color/white"
-                                android:textSize="15sp">
+                                android:text="Patient Name: "
+                                android:textColor="#5D5D5D"
+                                android:textSize="15sp"
+                                android:textStyle="bold">
 
                             </com.google.android.material.textview.MaterialTextView>
 
-                        </RelativeLayout>
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/LayoutTwo"
-                        android:layout_marginTop="7dp">
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/PasentName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Patient Name: "
-                            android:textColor="#5D5D5D"
-                            android:textSize="17sp"
-                            android:textStyle="bold">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/DetailsName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/PasentName"
-                            android:layout_marginTop="5dp"
-                            android:layout_toRightOf="@+id/PTitile"
-                            android:text="Sajib Roy"
-                            android:textColor="#5D5D5D"
-                            android:textSize="17sp"
-                            android:textStyle="normal">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/PHospital"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/DetailsName"
-                            android:layout_marginTop="7dp"
-                            android:text="Hospital Location: "
-                            android:textColor="#5D5D5D"
-                            android:textSize="17sp"
-                            android:textStyle="bold">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/HospitalNameID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/PHospital"
-                            android:layout_marginTop="5dp"
-                            android:text="TATA Medical center"
-                            android:textColor="#5D5D5D"
-                            android:textSize="17sp"
-                            android:textStyle="normal">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/DepertmentID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/HospitalNameID"
-                            android:layout_marginTop="7dp"
-                            android:text="Dipertment: "
-                            android:textColor="#5D5D5D"
-                            android:textSize="17sp"
-                            android:textStyle="bold">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/StudentDept"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/DepertmentID"
-                            android:layout_marginTop="5dp"
-                            android:text="Computer Science"
-                            android:textColor="#5D5D5D"
-                            android:textSize="17sp"
-                            android:textStyle="normal">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-
-                    </RelativeLayout>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/AddressCOntinerID"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/LayoutTwoContiner"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@drawable/request_post_background"
-                    android:elevation="5dp"
-                    android:padding="7dp">
-
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/TextHospital"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hospital Address:"
-                        android:textColor="#5D5D5D"
-                        android:textSize="17sp"
-                        android:textStyle="bold">
-
-                    </com.google.android.material.textview.MaterialTextView>
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/HospitalAddressID"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/TextHospital"
-                        android:layout_marginTop="5dp"
-                        android:gravity="bottom|left"
-                        android:text="14, MAR(E-W), DH Block(Newtown), Action Area I, Newtown, Kolkata, West Bengal 700160, India"
-                        android:textColor="#5D5D5D"
-                        android:textSize="17sp"
-                        android:textStyle="normal">
-
-                    </com.google.android.material.textview.MaterialTextView>
-
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/AddressCOntinerID"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@drawable/request_post_background"
-                    android:elevation="5dp"
-                    android:padding="7dp">
-
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/ContactText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Contact Information:"
-                        android:textColor="#5D5D5D"
-                        android:textSize="17sp"
-                        android:textStyle="bold">
-
-                    </com.google.android.material.textview.MaterialTextView>
-
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/ContactText"
-                        android:layout_marginTop="5dp">
-
-
-                        <RelativeLayout
-                            android:id="@+id/CallButtonID"
-                            android:layout_centerVertical="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_marginRight="3dp"
-                            android:layout_width="120dp"
-                            android:layout_height="40dp"
-                            android:background="@drawable/inprogress_button_design">
-
                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/DetailsName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:text="Call Now"
-                                android:textColor="@android:color/white"
-                                android:textSize="15sp">
+                                android:layout_below="@+id/PasentName"
+                                android:layout_marginTop="3dp"
+                                android:layout_toRightOf="@+id/PTitile"
+                                android:text="Sajib Roy"
+                                android:textColor="#5D5D5D"
+                                android:textSize="15sp"
+                                android:textStyle="normal">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/PHospital"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/DetailsName"
+                                android:layout_marginTop="5dp"
+                                android:text="Hospital Location: "
+                                android:textColor="#5D5D5D"
+                                android:textSize="15sp"
+                                android:textStyle="bold">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/HospitalNameID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/PHospital"
+                                android:layout_marginTop="3dp"
+                                android:text="TATA Medical center"
+                                android:textColor="#5D5D5D"
+                                android:textSize="15sp"
+                                android:textStyle="normal">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/DepertmentID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/HospitalNameID"
+                                android:layout_marginTop="5dp"
+                                android:text="Blood Group: "
+                                android:textColor="#5D5D5D"
+                                android:textSize="15sp"
+                                android:textStyle="bold">
 
                             </com.google.android.material.textview.MaterialTextView>
 
 
+                            <RelativeLayout
+                                android:background="@drawable/request_blood_bac"
+                                android:id="@+id/StudentDept"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_below="@+id/DepertmentID"
+                                android:layout_marginTop="3dp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/BloodGroup"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@android:color/white"
+                                    android:text="A+"
+                                    android:textSize="11sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+
+                            </RelativeLayout>
+
                         </RelativeLayout>
 
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/AddressCOntinerID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/LayoutTwoContiner"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/request_post_background"
+                        android:padding="5dp">
+
+
                         <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/ContactTextNumber"
-                            android:layout_centerVertical="true"
+                            android:id="@+id/TextHospital"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toLeftOf="@+id/CallButtonID"
+                            android:text="Hospital Address:"
+                            android:textColor="#5D5D5D"
+                            android:textSize="15sp"
+                            android:textStyle="bold">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/HospitalAddressID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextHospital"
+                            android:layout_marginTop="5dp"
                             android:gravity="bottom|left"
-                            android:text="Tap to call person"
+                            android:text="14, MAR(E-W), DH Block(Newtown), Action Area I, Newtown, Kolkata, West Bengal 700160, India"
                             android:textColor="#5D5D5D"
-                            android:layout_alignParentLeft="true"
-                            android:textSize="17sp"
-                            android:layout_marginRight="5dp"
+                            android:textSize="15sp"
                             android:textStyle="normal">
 
                         </com.google.android.material.textview.MaterialTextView>
@@ -426,40 +367,109 @@
 
                     </RelativeLayout>
 
+                    <RelativeLayout
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/AddressCOntinerID"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/request_post_background"
+                        android:padding="7dp">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/ContactText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Information:"
+                            android:textColor="#5D5D5D"
+                            android:textSize="15sp"
+                            android:textStyle="bold">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ContactText"
+                            android:layout_marginTop="5dp">
+
+
+                            <RelativeLayout
+                                android:id="@+id/CallButtonID"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="3dp"
+                                android:layout_width="100dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/inprogress_button_design">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="Call Now"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="15sp">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+
+                            </RelativeLayout>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/ContactTextNumber"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/CallButtonID"
+                                android:gravity="bottom|left"
+                                android:text="Tap to call person"
+                                android:textColor="#5D5D5D"
+                                android:layout_alignParentLeft="true"
+                                android:textSize="17sp"
+                                android:layout_marginRight="5dp"
+                                android:textStyle="normal">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
 
                 </RelativeLayout>
 
-
-            </RelativeLayout>
-
+            </ScrollView>
 
 
-            <RelativeLayout
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="15dp"
+
+
+            <CheckBox
+                android:id="@+id/CheackBoxID"
                 android:layout_above="@+id/NowDonateButtonID"
-                android:layout_width="match_parent"
+                android:layout_marginLeft="25dp"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:text="Terms and Conditions"
                 android:layout_height="wrap_content">
 
-                <CheckBox
-                    android:text="Terms and Conditions"
-                    android:id="@+id/ButtonCheackBox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </CheckBox>
-
-            </RelativeLayout>
+            </CheckBox>
 
             <RelativeLayout
                 android:id="@+id/NowDonateButtonID"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="35dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/inprogress_button_design">
 
                 <com.google.android.material.textview.MaterialTextView
@@ -470,7 +480,7 @@
                     android:layout_centerVertical="true"
                     android:text="Donate Now"
                     android:textColor="@android:color/white"
-                    android:textSize="18sp">
+                    android:textSize="15sp">
 
                 </com.google.android.material.textview.MaterialTextView>
 

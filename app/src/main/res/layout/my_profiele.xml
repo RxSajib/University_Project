@@ -1,0 +1,475 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="MyProfile.MyProfiele"
+    android:fitsSystemWindows="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/ProfileToolID"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageButton
+                    android:id="@+id/BackButtonIDs"
+                    android:layout_width="25dp"
+                    android:background="@null"
+                    android:src="@drawable/backicon"
+                    android:layout_height="25dp">
+
+                </ImageButton>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="My Profile"
+                    android:layout_toRightOf="@+id/BackButtonIDs"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <CheckBox
+            android:layout_marginLeft="25dp"
+            android:layout_above="@+id/UpdateButtonID"
+            android:layout_width="wrap_content"
+            android:text="Do you want to make your contact number\nvisiable for other"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+
+
+        </CheckBox>
+
+        <RelativeLayout
+            android:id="@+id/UpdateButtonID"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/update_button_design"
+            android:layout_marginRight="25dp"
+            android:layout_height="50dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:text="Update"
+                android:fontFamily="sans-serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:scrollbars="none"
+            android:layout_below="@+id/ProfileToolID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_margin="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+
+
+                <EditText
+                    android:id="@+id/UserProfileNameID"
+                    android:background="@drawable/profilename_desing"
+                    android:layout_width="match_parent"
+                    android:textSize="15sp"
+                    android:padding="16dp"
+                    android:hint="Enter Name"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:layout_height="wrap_content">
+                </EditText>
+
+                <RelativeLayout
+                    android:id="@+id/DepertmentButtonIDs"
+                    android:background="@drawable/profilename_desing"
+                    android:layout_below="@id/UserProfileNameID"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:textSize="15sp"
+                        android:text="Department"
+                        android:id="@+id/Depttext"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <ImageButton
+                        android:background="@null"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="18dp"
+                        android:layout_width="20dp"
+                        android:src="@drawable/spinnericon"
+                        android:layout_height="20dp">
+                    </ImageButton>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_below="@+id/DepertmentButtonIDs"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20sp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/GenderTextID"
+                        android:textSize="17sp"
+                        android:textColor="@android:color/black"
+                        android:text="Gender"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                    <RelativeLayout
+                        android:layout_below="@+id/GenderTextID"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <RelativeLayout
+                            android:id="@+id/BloodContinr"
+                            android:layout_width="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content">
+
+                            <View
+                                android:id="@+id/View"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_width="1dp"
+                                android:background="#8C8C8C"
+                                android:layout_height="50dp">
+
+                            </View>
+
+                            <ImageView
+                                android:id="@+id/MaleImage"
+                                android:src="@drawable/personblack"
+                                android:layout_width="70dp"
+                                android:layout_marginRight="35dp"
+                                android:layout_toLeftOf="@+id/View"
+                                android:layout_height="70dp">
+
+                            </ImageView>
+
+                            <ImageView
+                                android:id="@+id/Femaleicon"
+                                android:src="@drawable/woman_black"
+                                android:layout_toRightOf="@+id/View"
+                                android:layout_marginLeft="35dp"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp">
+
+                            </ImageView>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_below="@+id/BloodContinr"
+                            android:layout_marginTop="30dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/GroupText"
+                                android:textSize="17sp"
+                                android:textColor="@android:color/black"
+                                android:text="Selected Blood Group"
+                                android:fontFamily="sans-serif-medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+
+                            <RelativeLayout
+                                android:layout_below="@+id/GroupText"
+                                android:layout_marginTop="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/BloodFirstContiner"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <RelativeLayout
+                                        android:id="@+id/APlusID"
+                                        android:background="@drawable/blood_oval"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:textSize="13sp"
+                                            android:text="A+"
+                                            android:id="@+id/AplusText"
+                                            android:fontFamily="sans-serif-medium"
+                                            android:textColor="#939393"
+                                            android:layout_centerVertical="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/AMinID"
+                                        android:background="@drawable/blood_oval"
+                                        android:layout_width="40dp"
+                                        android:layout_toRightOf="@+id/APlusID"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_height="40dp">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:textSize="13sp"
+                                            android:text="A-"
+                                            android:id="@+id/AMinText"
+                                            android:fontFamily="sans-serif-medium"
+                                            android:textColor="#939393"
+                                            android:layout_centerVertical="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                    </RelativeLayout>
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/BPlusID"
+                                        android:background="@drawable/blood_oval"
+                                        android:layout_width="40dp"
+                                        android:layout_toRightOf="@+id/AMinID"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_height="40dp">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:textSize="13sp"
+                                            android:text="B+"
+                                            android:id="@+id/BPlusText"
+                                            android:fontFamily="sans-serif-medium"
+                                            android:textColor="#939393"
+                                            android:layout_centerVertical="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                    </RelativeLayout>
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/Bmin"
+                                        android:background="@drawable/blood_oval"
+                                        android:layout_width="40dp"
+                                        android:layout_toRightOf="@+id/BPlusID"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_height="40dp">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:textSize="13sp"
+                                            android:text="B-"
+                                            android:id="@+id/BMinText"
+                                            android:fontFamily="sans-serif-medium"
+                                            android:textColor="#939393"
+                                            android:layout_centerVertical="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                    </RelativeLayout>
+
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/OPlus"
+                                        android:background="@drawable/blood_oval"
+                                        android:layout_width="40dp"
+                                        android:layout_toRightOf="@+id/Bmin"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_height="40dp">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:textSize="13sp"
+                                            android:text="O+"
+                                            android:id="@+id/OPlusText"
+                                            android:fontFamily="sans-serif-medium"
+                                            android:textColor="#939393"
+                                            android:layout_centerVertical="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                    </RelativeLayout>
+
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/OMin"
+                                        android:background="@drawable/blood_oval"
+                                        android:layout_width="40dp"
+                                        android:layout_toRightOf="@+id/OPlus"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_height="40dp">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:textSize="13sp"
+                                            android:text="O-"
+                                            android:id="@+id/OMintext"
+                                            android:fontFamily="sans-serif-medium"
+                                            android:textColor="#939393"
+                                            android:layout_centerVertical="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                    </RelativeLayout>
+
+
+
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_below="@+id/BloodFirstContiner"
+                                    android:layout_marginTop="15sp"
+                                    android:layout_height="wrap_content">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/ABPlus"
+                                        android:background="@drawable/blood_oval"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:textSize="13sp"
+                                            android:text="AB+"
+                                            android:id="@+id/ABpLustext"
+                                            android:fontFamily="sans-serif-medium"
+                                            android:textColor="#939393"
+                                            android:layout_centerVertical="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                    </RelativeLayout>
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/ABMinus"
+                                        android:background="@drawable/blood_oval"
+                                        android:layout_width="40dp"
+                                        android:layout_toRightOf="@+id/ABPlus"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_height="40dp">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:textSize="13sp"
+                                            android:text="AB-"
+                                            android:id="@+id/ABMinusText"
+                                            android:fontFamily="sans-serif-medium"
+                                            android:textColor="#939393"
+                                            android:layout_centerVertical="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                    </RelativeLayout>
+
+
+
+
+                                </RelativeLayout>
+
+
+
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

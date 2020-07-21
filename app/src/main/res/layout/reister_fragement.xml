@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white"
     android:id="@+id/OptRootID"
     tools:context=".ReisterFragement">
@@ -90,7 +90,36 @@
 
                    </RelativeLayout>
 
+
+
+                   <com.chaos.view.PinView
+                       android:id="@+id/firstPinView"
+                       style="@style/PinWidget.PinView"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:cursorVisible="true"
+                       android:hint="Hint."
+                       android:inputType="text"
+                       android:itemBackground="@mipmap/ic_launcher"
+                       android:textSize="18sp"
+                       android:layout_centerHorizontal="true"
+                       android:layout_marginBottom="20dp"
+                       android:textStyle="bold"
+                       app:cursorColor="@android:color/holo_blue_dark"
+                       app:cursorWidth="2dp"
+                       app:hideLineWhenFilled="true"
+                       app:itemCount="6"
+                       app:itemHeight="48dp"
+                       app:itemRadius="4dp"
+                       android:layout_below="@+id/TextLayoutID"
+                       app:itemSpacing="0dp"
+                       app:itemWidth="48dp"
+                       app:lineColor="@android:color/background_light"
+                       app:lineWidth="2dp"
+                       app:viewType="rectangle" />
+
                    <RelativeLayout
+                       android:visibility="gone"
                        android:layout_below="@+id/TextLayoutID"
                        android:layout_width="match_parent"
                        android:layout_marginLeft="30dp"
@@ -281,11 +310,10 @@
                <RelativeLayout
                    android:id="@+id/LoginButtonID"
                    android:layout_width="match_parent"
-                   android:layout_height="45dp"
+                   android:layout_height="50dp"
                    android:layout_alignParentBottom="true"
                    android:layout_centerHorizontal="true"
                    android:layout_marginRight="30dp"
-                   android:elevation="0.2dp"
                    android:layout_marginLeft="30dp"
                    android:layout_marginBottom="20dp"
                    android:background="@drawable/logindesign"
@@ -308,6 +336,7 @@
                        android:layout_height="25dp"
                        android:layout_centerVertical="true"
                        android:indeterminate="true"
+                       android:visibility="gone"
                        android:layout_alignParentRight="true"
                        android:layout_marginRight="10dp">
 
